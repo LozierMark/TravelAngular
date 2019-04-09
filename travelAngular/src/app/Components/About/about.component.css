@@ -1,9 +1,12 @@
 body{
 
     background-size: cover;
-    background-image: url("src/assets/rodtruck.jpg");
+    background-image: url("src/assets/adventuremap.jpg");
   }
-
+h1{
+    font-style: normal;
+    color: orangered
+}
 
 
 h4{
@@ -11,6 +14,7 @@ h4{
     font-weight: 100;
     margin: auto;
     width: 50%;
+    
 }
 .center {
     font-size: 40px;
