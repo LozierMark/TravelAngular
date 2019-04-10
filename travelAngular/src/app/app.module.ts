@@ -18,6 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './Components/about/about.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
+import { TagsService } from './Services/tags.service';
+import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
+import { TagRequestsService } from './Services/tagRequests.service';
+import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +32,9 @@ import { LoginComponent } from './Components/login/login.component';
     PlaceDetailComponent,
     AboutComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    TagIndexComponent,
+    TagRequestIndexComponent
   ],
   imports: [
     AppRoutingModule,
@@ -43,7 +50,9 @@ import { LoginComponent } from './Components/login/login.component';
 
   ],
   providers: [
-    PlacesService
+    PlacesService,
+    TagsService,
+    TagRequestsService,
     AppRoutingModule
   ],
   bootstrap: [AppComponent]
