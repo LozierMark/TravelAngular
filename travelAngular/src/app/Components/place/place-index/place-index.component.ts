@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlacesService } from 'src/app/Services/places.service';
+import { PlacesService } from '../../../Services/places.service';
 import { Place } from '../../../Models/Place';
 import { MatTableDataSource } from '@angular/material';
 
@@ -9,13 +9,16 @@ import { MatTableDataSource } from '@angular/material';
   styleUrls: ['./place-index.component.css']
 })
 export class PlaceIndexComponent implements OnInit {
+  
+  dataSource: MatTableDataSource<Place>;
+  columnNames = ['PlaceId','PlaceName','PlaceLocation', 'PlaceDescription', 'PlaceImageUrl'];
 
   constructor(private _placesService: PlacesService) { }
-  dataSource: MatTableDataSource<Place>
-  columnNames = ['PlaceID','PlaceName'//'tags'
-  ]
-  ngOnInit() {   
-    this._placesService.getPlaces().subscribe((places: Place[]) => {});
-  }
 
+  ngOnInit() {   
+    this._placesService.getPlaces().subscribe((places: Place[]) => {
+      this.dataSource = new MatTableDataSource<Place>(places);
+    });
+  }
+ 
 }

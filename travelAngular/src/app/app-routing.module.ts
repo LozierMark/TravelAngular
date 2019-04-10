@@ -5,9 +5,14 @@ import { HomeComponent } from './Components/home/home.component';
 import { PlaceDetailComponent } from './Components/place/place-detail/place-detail.component';
 
 const appRoutes: Routes = [
-  {path: 'places', component: PlaceIndexComponent}]
+  {path: "", component: HomeComponent},
+  {path: "home", component: HomeComponent},
+  {path: "places", component: PlaceIndexComponent}
+];
 
 @NgModule({
+  declarations: [],
+  
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })

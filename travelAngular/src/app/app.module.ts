@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
@@ -8,12 +7,15 @@ import { MatToolbarModule,
          MatTableModule
 } from '@angular/material';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/home/home.component';
 import { PlacesService } from './Services/places.service';
 import { PlaceIndexComponent} from './Components/place/place-index/place-index.component';
 import { PlaceDetailComponent} from './Components/place/place-detail/place-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -23,10 +25,17 @@ import { PlaceDetailComponent} from './Components/place/place-detail/place-detai
     PlaceDetailComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     MatToolbarModule,
     MatTableModule,
-    AppRoutingModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule
+  ],
+  exports: [
+
   ],
   providers: [
     PlacesService
