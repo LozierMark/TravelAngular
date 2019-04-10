@@ -1,0 +1,37 @@
+<h1>All Tag Requests</h1>
+<hr>
+
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="TagRequestId">
+      <mat-header-cell *matHeaderCellDef> Tag Request ID</mat-header-cell>
+      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestId}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TagRequestName">
+      <mat-header-cell *matHeaderCellDef> Tag Request Name </mat-header-cell>
+      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TagRequestUserName">
+      <mat-header-cell *matHeaderCellDef> Tag Request UserName </mat-header-cell>
+      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestUserName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TagRequestDate">
+      <mat-header-cell *matHeaderCellDef> Tag Request Date </mat-header-cell>
+      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestDate}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="TagRequestPlace">
+      <mat-header-cell *matHeaderCellDef> Tag Request Place </mat-header-cell>
+      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestPlace}}</mat-cell>
+    </ng-container>
+
+   
+  </mat-table>
+</div>
+
