@@ -1,8 +1,14 @@
-body{
 
-    background-size: cover;
+  body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-size: 100%;
     background-image: url("src/assets/adventuremap.jpg");
-  }
+}
+   
+   
+
 h1{
     font-style: normal;
     color: orangered

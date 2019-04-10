@@ -1,8 +1,11 @@
-body{
 
-    background-size: cover;
-    background-image: url("src/assets/adventuremap.jpg");
-  }
+ body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-size: 100%;
+    background-color: orange;
+}
 
 div{
     border-style:inset;
