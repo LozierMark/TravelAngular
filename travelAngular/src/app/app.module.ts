@@ -15,14 +15,19 @@ import { PlacesService } from './Services/places.service';
 import { PlaceIndexComponent} from './Components/place/place-index/place-index.component';
 import { PlaceDetailComponent} from './Components/place/place-detail/place-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AboutComponent } from './Components/about/about.component';
+import { RegisterComponent } from './Components/register/register.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PlaceIndexComponent,
-    PlaceDetailComponent
+    PlaceDetailComponent,
+    AboutComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,
@@ -39,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     PlacesService
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
