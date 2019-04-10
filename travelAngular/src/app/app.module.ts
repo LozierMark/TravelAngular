@@ -43,7 +43,7 @@ import { LoginComponent } from './Components/login/login.component';
 
   ],
   providers: [
-    PlacesService
+    PlacesService,
     AppRoutingModule
   ],
   bootstrap: [AppComponent]
