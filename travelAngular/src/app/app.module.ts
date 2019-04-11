@@ -24,6 +24,7 @@ import { TagRequestsService } from './Services/tagRequests.service';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     TagIndexComponent,
     TagRequestIndexComponent,
-    TagRequestCreateComponent
+    TagRequestCreateComponent,
+    PlaceCreateComponent
   ],
   imports: [
     AppRoutingModule,

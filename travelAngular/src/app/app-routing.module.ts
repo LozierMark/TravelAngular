@@ -9,11 +9,13 @@ import { TagIndexComponent } from './Components/tag/tag-index/tag-index.componen
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
 import { HomeComponent } from './Components/home/home.component';
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
+import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'Home',   component: HomeComponent},
   { path: 'places', component:PlaceIndexComponent},
+  { path: 'places/create', component:PlaceCreateComponent},
   { path: 'About', component: AboutComponent },
   { path: 'Register', component: RegisterComponent },
   { path: 'Login', component: LoginComponent },
