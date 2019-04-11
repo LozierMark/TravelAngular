@@ -7,6 +7,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
+import { HomeComponent } from './Components/home/home.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
