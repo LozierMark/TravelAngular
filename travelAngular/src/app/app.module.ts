@@ -22,6 +22,8 @@ import { TagsService } from './Services/tags.service';
 import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
 import { TagRequestsService } from './Services/tagRequests.service';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
+import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-in
     RegisterComponent,
     LoginComponent,
     TagIndexComponent,
-    TagRequestIndexComponent
+    TagRequestIndexComponent,
+    TagRequestCreateComponent
   ],
   imports: [
     AppRoutingModule,
@@ -44,7 +47,9 @@ import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-in
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule    
   ],
   exports: [
 
