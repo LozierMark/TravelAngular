@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './Components/about/about.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -43,9 +44,11 @@ import { LoginComponent } from './Components/login/login.component';
 
   ],
   providers: [
-    PlacesService
+    {provide: APP_BASE_HREF, useValue: '/'},
+    PlacesService,
     AppRoutingModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

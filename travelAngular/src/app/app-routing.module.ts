@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { PlaceIndexComponent } from './Components/place/place-index/place-index.component';
 import { HomeComponent } from './Components/home/home.component';
 import { PlaceDetailComponent } from './Components/place/place-detail/place-detail.component';
-import { HomeComponent } from './Components/home/home.component';
 import { AboutComponent } from './Components/about/about.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
