@@ -22,9 +22,10 @@ import { TagsService } from './Services/tags.service';
 import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
 import { TagRequestsService } from './Services/tagRequests.service';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 
 @NgModule({
   declarations: [
@@ -42,6 +43,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatTableModule,
     MatButtonModule,
@@ -58,7 +62,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PlacesService,
     TagsService,
     TagRequestsService,
-    AppRoutingModule
+    AppRoutingModule,
+
+
   ],
   bootstrap: [AppComponent]
 })
