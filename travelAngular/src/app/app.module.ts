@@ -23,8 +23,9 @@ import { TagIndexComponent } from './Components/tag/tag-index/tag-index.componen
 import { TagRequestsService } from './Services/tagRequests.service';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { Browser } from 'protractor';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     RegisterComponent,
     LoginComponent,
     TagIndexComponent,
-    TagRequestIndexComponent
+    TagRequestIndexComponent,
+    TagRequestCreateComponent
   ],
   imports: [
     AppRoutingModule,
@@ -49,7 +51,9 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule    
   ],
   exports: [
 
