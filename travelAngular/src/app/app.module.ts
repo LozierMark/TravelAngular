@@ -19,6 +19,14 @@ import { AboutComponent } from './Components/about/about.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { TagsService } from './Services/tags.service';
+import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
+import { TagRequestsService } from './Services/tagRequests.service';
+import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,25 +36,35 @@ import { APP_BASE_HREF } from '@angular/common';
     PlaceDetailComponent,
     AboutComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    TagIndexComponent,
+    TagRequestIndexComponent,
+    TagRequestCreateComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     MatToolbarModule,
     MatTableModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule    
   ],
   exports: [
 
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'},
-    PlacesService,
     AppRoutingModule
+    PlacesService,
+    TagsService,
+    TagRequestsService
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

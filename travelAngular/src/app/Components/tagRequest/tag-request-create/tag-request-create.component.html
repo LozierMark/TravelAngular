@@ -1,0 +1,16 @@
+<h1>Request a New Tag</h1>
+<hr>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="tagRequestForm">
+  <div>
+    <div>
+      <mat-form-field>
+        <input placeholder="Enter Hashtag Name" formControlName="TagRequestName" type="text" required/>
+        </mat-form-field>
+    </div>
+<br>
+  </div>
+  <button mat-raised-button class="nav-btn" color="primary" type="submit">Submit</button>
+</form>
+
+<a mat-button routerLink="/tags">Back to List</a>

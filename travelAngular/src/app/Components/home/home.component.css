@@ -1,8 +1,33 @@
-body{
 
-    background-size: cover;
-    background-image: url("src/assets/adventuremap.jpg");
-  }
+body {
+	height: 100vh;
+}
+#left,#right {
+	width: 50%;
+	height: 100%;
+	background-size: cover;
+	cursor: pointer;
+}
+#left {
+	/* background-image:url(img/left.png); */
+	background-image:url("src/assets/citytower.jpg");
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#left:hover {
+    filter: none;
+    -webkit-filter: none;
+}
+#right {
+	/* background-image:url(img/right.png); */
+	background-image: url("src/assets/citywater.jpg");
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#right:hover {
+    filter: none;
+    -webkit-filter: none;
+}
 
 div{
     border-style:inset;

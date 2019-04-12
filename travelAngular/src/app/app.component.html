@@ -2,8 +2,15 @@
 <mat-toolbar color="primary">
   <button routerLink="/Home" routerLinkActive="active">Home</button>                                                
   <button routerLink="/About" routerLinkActive="active">About</button> 
-  <button routerLink="/Register" routerLinkActive="active">Register</button>
-  <button routerLink="/Login" routerLinkActive="active">Login</button>                                             
+  <button routerLink="/places" routerLinkActive="active>">Browse all Places</button>
+  <button routerLink="/tags" routerLinkActive="active">Browse all #s</button>
+
+  <div style="position: absolute; right: 25px;">
+    <button routerLink="/Register" routerLinkActive="active">Register</button>
+    <button routerLink="/Login" routerLinkActive="active">Login</button>
+  </div>
+
+
 </mat-toolbar>
 
 
@@ -17,3 +24,4 @@
 </drop-tag>
 
 <router-outlet></router-outlet>
+
