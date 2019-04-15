@@ -24,7 +24,7 @@ import { TagIndexComponent } from './Components/tag/tag-index/tag-index.componen
 import { TagRequestsService } from './Services/tagRequests.service';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 
@@ -61,7 +61,7 @@ import { PlaceCreateComponent } from './Components/place/place-create/place-crea
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: '/'},
-    AppRoutingModule
+    AppRoutingModule,
     PlacesService,
     TagsService,
     TagRequestsService

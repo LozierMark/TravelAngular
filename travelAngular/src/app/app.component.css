@@ -1,0 +1,13 @@
+.navbar {
+    background-color:black;
+    margin-bottom: 0px;
+}
+button {
+    font-family: 'Merienda One', cursive;
+}
+.title {
+    font-family: 'Merienda One', cursive;
+    font-size: 30px;
+    color: white;
+    margin: 40%;
+}
