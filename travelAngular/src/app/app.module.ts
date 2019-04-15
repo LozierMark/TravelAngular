@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './Components/about/about.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
+import { APP_BASE_HREF } from '@angular/common';
 import { TagsService } from './Services/tags.service';
 import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
 import { TagRequestsService } from './Services/tagRequests.service';
@@ -25,7 +26,7 @@ import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-in
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
-
+import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-c
     LoginComponent,
     TagIndexComponent,
     TagRequestIndexComponent,
-    TagRequestCreateComponent
+    TagRequestCreateComponent,
+    PlaceCreateComponent
   ],
   imports: [
     AppRoutingModule,
@@ -58,13 +60,13 @@ import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-c
 
   ],
   providers: [
+    {provide: APP_BASE_HREF, useValue: '/'},
+    AppRoutingModule
     PlacesService,
     TagsService,
-    TagRequestsService,
-    AppRoutingModule,
-
-
+    TagRequestsService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
