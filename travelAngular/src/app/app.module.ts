@@ -25,7 +25,7 @@ import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-in
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +52,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     HttpClientModule,
-    FormsModule,
     ReactiveFormsModule    
   ],
   exports: [
