@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Place } from '../Models/Place';
 
 // const ApiUrl = "http://127.0.0.1:52366/api";
 const ApiUrl = "http://localhost:52366/api";
@@ -22,5 +23,9 @@ export class PlacesService {
 
   getPlace(id: string) {
     return this._http.get(`${ApiUrl}/place/${id}`);
+  }
+
+  createPlace(place: Place) {
+    return this._http.post(`${ApiUrl}/Places`, place)
   }
 }

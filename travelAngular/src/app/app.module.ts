@@ -27,6 +27,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     TagIndexComponent,
     TagRequestIndexComponent,
-    TagRequestCreateComponent
+    TagRequestCreateComponent,
+    PlaceCreateComponent
   ],
   imports: [
     AppRoutingModule,
