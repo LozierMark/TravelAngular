@@ -1,6 +1,5 @@
-
 body {
-	height: 100vh;
+    height: 100vh;
 }
 #left,#right {
 	width: 50%;
@@ -9,40 +8,55 @@ body {
 	cursor: pointer;
 }
 #left {
-	/* background-image:url(img/left.png); */
-	background-image:url("src/assets/citytower.jpg");
+    background-image:url("../../../assets/citytower-modified.jpg");
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+}
+body {
+    background-color: black;
+    margin: 0px;
 }
 #left:hover {
     filter: none;
     -webkit-filter: none;
 }
+#innerbody {
+    /* cake is good */
+    margin: 0px;
+}
 #right {
-	/* background-image:url(img/right.png); */
-	background-image: url("src/assets/citywater.jpg");
+	background-image: url("../../../assets/man&map.jpeg");
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
 }
 #right:hover {
     filter: none;
     -webkit-filter: none;
+    -ms-filter: none;
+}
+#left:hover #titleLeft {
+    text-shadow: 0px 0px 15px #FF0;
+}
+#right:hover #titleRight {
+    text-shadow: 0px 0px 15px #FF0;
+}
+#titleLeft {
+    font-family: 'Merienda One', cursive;
+    color: white;
+    font-size: 166px;
+    text-decoration: none;
+    position: relative;
+    top: 14%;
+    left: 12%;
+}
+#titleRight {
+    font-family: 'Merienda One', cursive;
+    color: black;
+    font-size: 166px;
+    text-decoration: none;
+    position: relative;
+    top: 14%;
+    left: 10%;
 }
 
-div{
-    border-style:inset;
-
-}
-h4{
-    font-size: 55px;
-    font-weight: 100;
-    margin: auto;
-    width: 50%;
-}
-.center {
-    font-size: 40px;
-    font-weight: 100;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-  }

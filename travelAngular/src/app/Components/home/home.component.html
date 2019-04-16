@@ -1,33 +1,11 @@
-<body>
-  <!-- <div> -->
-    <div style="display:flex;">
-      <div style="border:none;width:50%;text-align:center;">
-        <h2 class="left">Know a good place?</h2>
-      </div>
-      <div style="width:50%;border:none;text-align: center;">
-        <h2 class="right">Looking for a good place?</h2>
-      </div>
+<body id="innerbody">
+  <div style="display:flex; height:100%; width:100%;">
+    <div style="width:50%; height:100%;" id="left" routerLink="/Login">
+      <span id="titleLeft">#Add</span>
     </div>
-    <div style="display:flex;">
-      <div style="border:none;width:50%;text-align: center;">
-        <h2 class="left"><button>Add a Place</button></h2>
-      </div>
-      <div style="width:50%;border:none;text-align:center;">
-        <h2 class="right"><button>Choose your #s</button></h2>
-      </div>
+    <div style="width:50%; height:100%;" id="right" routerLink="/placeCreate">
+      <span id="titleRight">#Find</span>
+      <!-- <h1 id="titleRight">LASERS ARE COOL</h1> -->
     </div>
-    <!-- <div style="display:flex;">
-        <div style="border:none;width:50%;text-align: center;">
-          <h2 class="left"><button routerLink="/places" routerLinkActive="active>">Browse all Places</button></h2>
-        </div>
-        <div style="width:50%;border:none;text-align:center;">
-          <h2 class="right"><button routerLink="/tags" routerLinkActive="active">Browse all #s</button></h2>
-       </div> 
-       </div> 
-    </div> -->
-    <div style="display:flex; height: 100%; width:100%;">
-      <a style="width:50%; height: 100%;" routerLink=""><div style="width:100%;" id="left"></div></a>
-      <a style="width:50%; height: 100%;" routerLink=""><div style="width:100%;"id="right"></div></a>
-    </div>
+  </div>
 </body>
-
