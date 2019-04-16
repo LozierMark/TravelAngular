@@ -1,3 +1,5 @@
+import { Tag } from "./Tag";
+
 export interface Place {
     PlaceId?: number;
     PlaceName: string;
@@ -8,4 +10,5 @@ export interface Place {
     ModifiedUTC?: Date;
     SubmittingUserId?: number;
     ModifyingUserId?: number;
+    Tags: Tag[];
 }
