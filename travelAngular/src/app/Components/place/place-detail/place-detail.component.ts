@@ -22,4 +22,6 @@ export class PlaceDetailComponent implements OnInit {
     });
   }
 
+
 }
+

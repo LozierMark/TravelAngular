@@ -1,0 +1,31 @@
+<p>
+  place-delete works!
+</p>
+<h4>Are you sure you want to delete this?</h4>
+<h4> Are you really sure you want to delete this?</h4>
+<hr>
+
+<div *ngIf="Place"></div>
+  <div>
+    <label for="PlaceId">PlaceId</label>
+    <span>{{place.PlaceId}}</span>
+    </div>
+    <div>
+      <label for="PlaceName">PlaceName</label>
+      <span>{{place.PlaceName}}</span>
+  </div>
+  <div>
+      <label for="PlaceLocation">PlaceLocation</label>
+      <span>{{place.PlaceLocation}}</span>
+  </div>
+  <div>
+      <label for="PlaceDescription">PlaceDescription</label>
+      <span>{{place.PlaceDescription}}</span>
+  </div>
+  <div>
+      <label for="PlaceImageUrl">PlaceImageUrl</label>
+      <span>{{place.PlaceImageUrl}}</span>
+  </div>
+
+<button mat-button color="warn" (click)="onDelete()">Delete</button>
+<button mat-button color="primary" routerLink="/places"routerLinkActive="active">Back to List</button>

@@ -10,12 +10,27 @@ import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-in
 import { HomeComponent } from './Components/home/home.component';
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
+import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
+import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'Home',   component: HomeComponent},
+  // {
+  //   path: 'places',
+  //   children: [
+  //     {path:'', component:PlaceIndexComponent},
+  //     {path:'create',component:PlaceCreateComponent},
+  //     {path:'detail/:id',component:PlaceDetailComponent},
+  //     {path:'edit/:id',component:PlaceEditComponent},
+  //     {path:'delete/:id',component:PlaceDeleteComponent}
+  //   ]
+  // },
   { path: 'places', component:PlaceIndexComponent},
   { path: 'placeCreate', component:PlaceCreateComponent},
+  { path: 'placeDetail',component:PlaceDetailComponent},
+  { path: 'placeEdit', component:PlaceEditComponent},
+  { path: 'placeDelete',component:PlaceDeleteComponent},
   { path: 'About', component: AboutComponent },
   { path: 'Register', component: RegisterComponent },
   { path: 'Login', component: LoginComponent },

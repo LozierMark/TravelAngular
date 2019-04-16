@@ -5,11 +5,31 @@
 </div>
 
 <div>
-  <label for="">PlaceId:</label>
+  <label for="PlaceId">PlaceId:</label>
   <span>{{place.PlaceId}}</span>
 </div>
 
 <div>
-  <label for="">Place Name:</label>
+  <label for="PlaceName">Place Name:</label>
   <span>{{place.PlaceName}}</span>
 </div>
+
+<div>
+    <label for="PlaceLocation">Place Location:</label>
+    <span>{{place.PlaceLocation}}</span>
+  </div>
+
+  <div>
+      <label for="PlaceDescription">Place Description:</label>
+      <span>{{place.PlaceDescription}}</span>
+    </div>
+
+    <div>
+        <label for="PlaceImageURL">Place ImageURL:</label>
+        <span>{{place.PlaceImageURL}}</span>
+      </div>
+
+      <div>
+        <h2><button mat-raised-button routerLink="/placeDelete" routerLinkActive="active">Delete</button></h2>
+      </div>
+  <div>

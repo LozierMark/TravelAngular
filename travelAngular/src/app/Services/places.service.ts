@@ -28,4 +28,13 @@ export class PlacesService {
   createPlace(place: Place) {
     return this._http.post(`${ApiUrl}/Places`, place)
   }
+
+  editPlace(place: Place) {
+    return this._http.put('${ApriUrl}/Places', place, { headers: this.getHeaders()});
+  }
+  deletePlace(id:number) {
+    return this._http.delete(`${ApiUrl}/Places/${id}`, { headers: this.getHeaders() });
+  }
 }
+
+
