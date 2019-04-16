@@ -7,3 +7,5 @@ customElements.define("h-tag",class HTagHTMLElement extends HTMLElement {
         super();
     }
 });
+
+document.body.style.margin = "0px";

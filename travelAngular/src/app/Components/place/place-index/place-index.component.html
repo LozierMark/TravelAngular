@@ -1,19 +1,20 @@
-<h1>All Places</h1>
-<hr>
+<body id="innerbody">
 
-<div>
-  <mat-table #table [dataSource]="dataSource">
+  <div id="table">
+  <h1>All Places</h1>
+   
+  <mat-table id="table" [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-
-    <ng-container matColumnDef="PlaceId">
+  <hr>
+    <!-- <ng-container matColumnDef="PlaceId">
       <mat-header-cell *matHeaderCellDef> Place ID</mat-header-cell>
       <mat-cell *matCellDef="let place"> {{place.PlaceId}}</mat-cell>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="PlaceName">
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef="let place"> {{place.PlaceName}}</mat-cell>
+      <mat-cell *matCellDef="let place" routerLink="/placeDetail/id"> {{place.PlaceName}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="PlaceLocation">
@@ -21,14 +22,19 @@
       <mat-cell *matCellDef="let place"> {{place.PlaceLocation}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="PlaceDescription">
+    <!-- <ng-container matColumnDef="PlaceDescription">
       <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
       <mat-cell *matCellDef="let place"> {{place.PlaceDescription}}</mat-cell>
-    </ng-container>
+    </ng-container> -->
 
-    <ng-container matColumnDef="PlaceImageUrl">
+    <!-- <ng-container matColumnDef="PlaceImageUrl">
       <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
       <mat-cell *matCellDef="let place"> {{place.PlaceImageUrl}}</mat-cell>
+    </ng-container> -->
+
+    <ng-container matColumnDef="#s">
+      <mat-header-cell *matHeaderCellDef> #s </mat-header-cell>
+      <mat-cell *matCellDef="let place"> {{place.tags}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="details">
@@ -40,4 +46,4 @@
     
   </mat-table>
 </div>
-
+</body>

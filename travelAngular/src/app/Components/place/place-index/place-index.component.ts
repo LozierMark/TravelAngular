@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 export class PlaceIndexComponent implements OnInit {
   
   dataSource: MatTableDataSource<Place>;
-  columnNames = ['PlaceId','PlaceName','PlaceLocation', 'PlaceDescription', 'PlaceImageUrl'];
+  columnNames = ['PlaceName','PlaceLocation','#s'];
 
   constructor(private _placesService: PlacesService) { }
 
