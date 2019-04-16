@@ -1,27 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
+<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+<mat-toolbar class="navbar">
   <button routerLink="/Home" routerLinkActive="active">Home</button>                                                
   <button routerLink="/About" routerLinkActive="active">About</button> 
   <button routerLink="/places" routerLinkActive="active>">Browse all Places</button>
   <button routerLink="/tags" routerLinkActive="active">Browse all #s</button>
-
+  <div class="title">
+    <p> #Travel</p>
+  </div>
   <div style="position: absolute; right: 25px;">
     <button routerLink="/Register" routerLinkActive="active">Register</button>
     <button routerLink="/Login" routerLinkActive="active">Login</button>
   </div>
-
-
 </mat-toolbar>
-
-
-<h-tag>fire</h-tag><h-tag>lasers</h-tag><drop-tag>
-  + tag
-  <div>
-    <a href="">a</a>
-    <a href="">b</a>
-    <a href="">c</a>
-  </div>
-</drop-tag>
-
 <router-outlet></router-outlet>
-

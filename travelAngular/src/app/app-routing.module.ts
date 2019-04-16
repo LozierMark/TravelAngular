@@ -15,7 +15,7 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'Home',   component: HomeComponent},
   { path: 'places', component:PlaceIndexComponent},
-  { path: 'places/create', component:PlaceCreateComponent},
+  { path: 'placeCreate', component:PlaceCreateComponent},
   { path: 'About', component: AboutComponent },
   { path: 'Register', component: RegisterComponent },
   { path: 'Login', component: LoginComponent },
