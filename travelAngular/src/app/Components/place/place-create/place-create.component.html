@@ -1,31 +1,32 @@
 <h1>Add a New Place</h1>
 <hr>
 
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="placeForm">
+<form (ngSubmit)="onSubmit()" [formGroup]="placeForm">
   <div>
     <div>
-      <mat-form-field>
-        <input placeholder="Name of Place" formControlName="PlaceName" type="text" required/>
+      <mat-form-field id="form">
+        <input matInput placeholder="Name of Place" formControlName="PlaceName" type="text" required/>
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field>
-        <input placeholder="Location" formControlName="PlaceLocation" type="text" required/>
+        <mat-form-field id="form">
+            <input matInput placeholder="Location" formControlName="PlaceLocation" type="text" required/>
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field>
-        <textarea placeholder="Description" formControlName="PlaceDescription" type="text" required></textarea>
+        <mat-form-field id="form">
+            <textarea matInput placeholder="Description" formControlName="PlaceDescription" type="text" required></textarea>
       </mat-form-field>
     </div>
     <div>
-      <mat-form-field>
-        <input placeholder="Place Image Url" formControlName="PlaceImageUrl" type="text" required/>
+        <mat-form-field id="form">
+            <input matInput placeholder="Place Image Url" formControlName="PlaceImageUrl" type="text" required/>
       </mat-form-field>
     </div>
   </div>
+  <button id="button" mat-raised-button type="submit">Add Place</button>
+  <button id="button" mat-raised-button routerLink="/places">Back to All Places</button>
 </form>
 
-<a mat-button routerLink="/places">Back to All Places</a>
 
 

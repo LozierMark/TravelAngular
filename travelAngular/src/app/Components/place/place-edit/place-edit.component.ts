@@ -43,7 +43,8 @@ export class PlaceEditComponent implements OnInit {
       PlaceName: form.value.PlaceName,
       PlaceLocation: form.value.PlaceLocation,
       PlaceDescription: form.value.PlaceDescription,
-      PlaceImageUrl: form.value.PlaceImageUrl
+      PlaceImageUrl: form.value.PlaceImageUrl,
+      Tags: []
     };
     this._placeService.editPlace(editPlace).subscribe(d => {
       this._router.navigate(['/places']);

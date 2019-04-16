@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule,
          MatButtonModule,
          MatFormFieldModule,
@@ -23,7 +24,6 @@ import { TagsService } from './Services/tags.service';
 import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
 import { TagRequestsService } from './Services/tagRequests.service';
 import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
@@ -51,14 +51,13 @@ import { PlaceDeleteComponent } from './Components/place/place-delete/place-dele
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
     MatToolbarModule,
-    MatTableModule,
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    BrowserAnimationsModule,
+    MatTableModule,
     HttpClientModule,
-    ReactiveFormsModule    
   ],
   exports: [
 

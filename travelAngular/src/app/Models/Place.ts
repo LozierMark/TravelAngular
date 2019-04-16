@@ -10,5 +10,5 @@ export interface Place {
     ModifiedUTC?: Date;
     SubmittingUserId?: number;
     ModifyingUserId?: number;
-    Tags: Tag[];
+    Tags?: Tag[];
 }

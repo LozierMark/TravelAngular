@@ -3,8 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Place } from '../Models/Place';
 
 // const ApiUrl = "http://127.0.0.1:52366/api";
-const ApiUrl = "http://localhost:52366/api";
+// const ApiUrl = "http://localhost:52366/api";
 // const ApiUrl = "http://192.168.1.162:52366/api";
+const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
 
 @Injectable({
   providedIn: 'root'
@@ -26,14 +27,16 @@ export class PlacesService {
   }
 
   createPlace(place: Place) {
-    return this._http.post(`${ApiUrl}/Places`, place)
+    console.log("Sending Create Request to Server");
+    place.Tags=[];
+    return this._http.post(`${ApiUrl}/place`, place)
   }
 
   editPlace(place: Place) {
-    return this._http.put('${ApriUrl}/Places', place, { headers: this.getHeaders()});
+    return this._http.put('${ApriUrl}/place', place, { headers: this.getHeaders()});
   }
   deletePlace(id:number) {
-    return this._http.delete(`${ApiUrl}/Places/${id}`, { headers: this.getHeaders() });
+    return this._http.delete(`${ApiUrl}/place/${id}`, { headers: this.getHeaders() });
   }
 }
 
