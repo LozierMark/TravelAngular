@@ -1,0 +1,31 @@
+<p>
+  place-edit works!
+</p>
+<hr>
+<div *ngIf="place">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="editPlaceForm">
+  <div>
+    <div hidden>
+      <mat-form-field>
+        <input matInput placeholder="Name of Place" formControlName="PlaceName" type="text" required [value}="place.NameOfPlace"/>
+      </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+          <input matInput placeholder="Location" formControlName="Location" type="text" required [value]="place.Location" />
+        </mat-form-field>
+      </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Description" formControlName="PlaceDescription" type="text" required [value]="place.Description" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Place Image Url" formControlName="PlaceImageUrl" type="text" required [value]="place.PlaceImageUrl" />
+      </mat-form-field>
+    </div>
+  </div>
+</form>
+
+<a mat-button routerLink="/places">Back to All Places</a>
