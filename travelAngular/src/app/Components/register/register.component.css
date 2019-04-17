@@ -1,9 +1,15 @@
-body{
+#innerbody{
+  background-image: url("../../../assets/LargeCityBW.jpg");
+  background-size: cover;
+  margin: 0px;
+  padding-top: 10px;
+}
 
-    background-size: cover;
-    background-image: url("../../../assets/mapcompass.jpg");
-  }
-
+#form{
+  background-color: rgb(243, 234, 234, .7);
+  margin: 0% 40% 0% 40%;
+  text-align: center;
+}
 
 
 h4{

@@ -1,19 +1,11 @@
-<h1>All Tags</h1>
-<hr>
-
 <div>
   <mat-table #table [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
-    <ng-container matColumnDef="TagId">
-      <mat-header-cell *matHeaderCellDef><h1>Tag ID</h1></mat-header-cell>
-      <mat-cell *matCellDef="let tag"> {{tag.TagId}}</mat-cell>
-    </ng-container>
-
     <ng-container matColumnDef="TagName">
-      <mat-header-cell *matHeaderCellDef><h1>Tag</h1></mat-header-cell>
-      <mat-cell *matCellDef="let place"> {{tag.TagName}}</mat-cell>
+      <mat-header-cell *matHeaderCellDef> All Tags </mat-header-cell>
+      <mat-cell *matCellDef="let tag"> <h-tag>{{tag.TagName}}</h-tag></mat-cell>
     </ng-container>
     </mat-table>
 </div>

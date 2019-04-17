@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class PlaceCreateComponent implements OnInit {
 
-  placeForm: FormGroup;
+  private _placeForm: FormGroup;
 
-  constructor(private _placeService: PlacesService, private _form: FormBuilder, private _router: Router) {
+  constructor(private _form: FormBuilder, private _placeService: PlacesService,  private _router: Router) {
     this.createForm();
    }
 
@@ -20,16 +20,19 @@ export class PlaceCreateComponent implements OnInit {
   }
 
   createForm() {
-    this.placeForm = this._form.group({
+    this._placeForm = this._form.group({
       PlaceName: new FormControl,
       PlaceLocation: new FormControl,
       PlaceDescription: new FormControl,
-      PlaceImageUrl: new FormControl
+      PlaceImageUrl: new FormControl,
+      Tags:[]
     });
   }
 
   onSubmit() {
-    this._placeService.createPlace(this.placeForm.value).subscribe(data => {
+    console.log("It's Working");
+    this._placeService.createPlace(this._placeForm.value)
+    .subscribe(data => {
       this._router.navigate(['/places']);
     });
   }

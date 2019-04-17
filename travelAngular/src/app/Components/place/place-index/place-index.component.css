@@ -11,12 +11,15 @@
 
 #table {
     font-family: 'Merienda One', cursive;
-    background-color: rgb(243, 234, 234, .8);
+    background-color: rgb(243, 234, 234, .7);
     margin: 0px 10px 0px 10px;
     padding: 0px;
 }
 h1 {
     font-family: 'Merienda One', cursive;
     color: black; 
-    margin: 10px 0px 0px 25px;
+    margin: 0px 10px 0px 10px;
+    background-color: rgb(243, 234, 234, .7);
+    padding-left: 10px;
+
 }
