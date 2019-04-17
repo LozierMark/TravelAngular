@@ -19,3 +19,6 @@ body { margin: 0; font-family:'Merienda One', cursive;
 .button:hover {
     color: orange;
 }
+h-tag {
+    line-height: 18pt;
+}

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const ApiUrl = '';
+const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class TagsService {
   constructor(private _http: HttpClient) { }
 
   getTags() {
-    return this._http.get(`${ApiUrl}/Notes`)
+    return this._http.get(`${ApiUrl}/tag`)
   }
 
   private getHeaders() {

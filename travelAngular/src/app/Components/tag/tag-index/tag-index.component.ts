@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 export class TagIndexComponent implements OnInit {
 
   dataSource: MatTableDataSource<Tag>;
-  columnNames = ['TagId','TagName'];
+  columnNames = ['TagName'];
 
   constructor(private _tagsService: TagsService) { }
 

@@ -1,17 +1,9 @@
 <body id="innerbody">
-
-  <div id="table">
-  <h1>All Places</h1>
-   
-  <mat-table id="table" [dataSource]="dataSource">
+   <h1>All Places</h1>
+    <mat-table id="table" [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
-  <hr>
-    <!-- <ng-container matColumnDef="PlaceId">
-      <mat-header-cell *matHeaderCellDef> Place ID</mat-header-cell>
-      <mat-cell *matCellDef="let place"> {{place.PlaceId}}</mat-cell>
-    </ng-container> -->
-
+    
     <ng-container matColumnDef="PlaceName">
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
       <mat-cell *matCellDef="let place" routerLink="/placeDetail/id"> {{place.PlaceName}}</mat-cell>
@@ -19,7 +11,7 @@
 
     <ng-container matColumnDef="PlaceLocation">
       <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
-      <mat-cell *matCellDef="let place"> {{place.PlaceLocation}}</mat-cell>
+      <mat-cell *matCellDef="let place" routerLink="/placeDetail/PlaceId"> {{place.PlaceLocation}}</mat-cell>
     </ng-container>
 
     <!-- <ng-container matColumnDef="PlaceDescription">
@@ -50,9 +42,6 @@
         <i mat-icon class="material-icons" routerLink="places/edit/{{place.PlaceId}}">edit</i>
       </mat-cell>
     </ng-container>
-
-    
     
   </mat-table>
-</div>
 </body>
