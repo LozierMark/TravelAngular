@@ -7,19 +7,32 @@
     background-image: url("src/assets/adventuremap.jpg");
 }
    
-   
-
-h1{
-    font-style: normal;
-    color: orangered
+#name,#email,#message {
+  font-size: 15pt;
+  color:plum;
 }
 
+h1{
+  font-family: 'Merienda One', cursive;
+  font-size: 30px;
+  color:purple;
+}
 
+label{
+  font-family: 'Merienda One', cursive;
+  font-size: 30px;
+  color:purple;
+}
+p {
+  font-family: 'Merienda One', cursive;
+font-size: 19px;
+color:black;
+}
 h4{
-    font-size: 55px;
-    font-weight: 100;
-    margin: auto;
-    width: 50%;
+  font-family: 'Merienda One', cursive;
+  font-size: 30px;
+  color:plum;
+
     
 }
 .center {
