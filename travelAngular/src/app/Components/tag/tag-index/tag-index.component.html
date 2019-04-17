@@ -7,13 +7,14 @@
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
     <ng-container matColumnDef="TagId">
-      <mat-header-cell *matHeaderCellDef> Tag ID</mat-header-cell>
+      <mat-header-cell *matHeaderCellDef><h1>Tag ID</h1></mat-header-cell>
       <mat-cell *matCellDef="let tag"> {{tag.TagId}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="TagName">
-      <mat-header-cell *matHeaderCellDef> Tag </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef><h1>Tag</h1></mat-header-cell>
       <mat-cell *matCellDef="let place"> {{tag.TagName}}</mat-cell>
     </ng-container>
     </mat-table>
 </div>
+<body></body>
