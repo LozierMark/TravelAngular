@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatToolbarModule,
          MatButtonModule,
@@ -29,6 +30,33 @@ import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-c
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
+import { AuthService } from './Services/auth.service';
+
+const routes = [
+  { path: '', component: HomeComponent},
+  { path: 'Home',   component: HomeComponent},
+  // {
+  //   path: 'places',
+  //   children: [
+  //     {path:'', component:PlaceIndexComponent},
+  //     {path:'create',component:PlaceCreateComponent},
+  //     {path:'detail/:id',component:PlaceDetailComponent},
+  //     {path:'edit/:id',component:PlaceEditComponent},
+  //     {path:'delete/:id',component:PlaceDeleteComponent}
+  //   ]
+  // },
+  { path: 'places', component:PlaceIndexComponent},
+  { path: 'placeCreate', component:PlaceCreateComponent},
+  { path: 'placeDetail',component:PlaceDetailComponent},
+  { path: 'placeEdit', component:PlaceEditComponent},
+  { path: 'placeDelete',component:PlaceDeleteComponent},
+  { path: 'About', component: AboutComponent },
+  { path: 'Register', component: RegisterComponent },
+  { path: 'Login', component: LoginComponent },
+  { path: 'tags' , component: TagIndexComponent},
+  { path: 'tagRequests', component: TagRequestIndexComponent },
+  { path: 'tagRequests/create', component: TagRequestCreateComponent },
+];
 
 @NgModule({
   declarations: [
@@ -50,6 +78,7 @@ import { PlaceDeleteComponent } from './Components/place/place-delete/place-dele
     AppRoutingModule,
     BrowserModule,
     FormsModule,
+    RouterModule.forRoot(routes),
     ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
@@ -67,7 +96,8 @@ import { PlaceDeleteComponent } from './Components/place/place-delete/place-dele
     AppRoutingModule,
     PlacesService,
     TagsService,
-    TagRequestsService
+    TagRequestsService,
+    AuthService
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

@@ -13,7 +13,7 @@ import { PlaceCreateComponent } from './Components/place/place-create/place-crea
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 
-const appRoutes: Routes = [
+const routes = [
   { path: '', component: HomeComponent},
   { path: 'Home',   component: HomeComponent},
   // {
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

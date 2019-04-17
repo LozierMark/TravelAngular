@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class PlaceCreateComponent implements OnInit {
 
-  _placeForm: FormGroup;
+  private _placeForm: FormGroup;
 
-  constructor(private _placeService: PlacesService, private _form: FormBuilder, private _router: Router) {
+  constructor(private _form: FormBuilder, private _placeService: PlacesService,  private _router: Router) {
     this.createForm();
    }
 
@@ -31,7 +31,8 @@ export class PlaceCreateComponent implements OnInit {
 
   onSubmit() {
     console.log("It's Working");
-    this._placeService.createPlace(this._placeForm.value).subscribe(data => {
+    this._placeService.createPlace(this._placeForm.value)
+    .subscribe(data => {
       this._router.navigate(['/places']);
     });
   }

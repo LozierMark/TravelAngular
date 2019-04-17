@@ -48,7 +48,7 @@ body {
     text-decoration: none;
     position: relative;
     top: 14%;
-    left: 12%;
+    /* left: 12%; */
 }
 #titleRight {
     font-family: 'Merienda One', cursive;
@@ -57,6 +57,6 @@ body {
     text-decoration: none;
     position: relative;
     top: 14%;
-    left: 10%;
+    /* left: 10%; */
 }
 

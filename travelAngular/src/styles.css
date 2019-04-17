@@ -7,4 +7,15 @@ body{
     min-height: 100vh;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family:'Merienda One', cursive;
+}
+.button {
+    color: white;
+    font-family: 'Merienda One', cursive;
+    border: 1px solid #000;
+    width: 225px;
+    background-color: black;
+}
+.button:hover {
+    color: orange;
+}

@@ -1,10 +1,9 @@
-<h1>
-  Create New Account
-</h1>
+<body id="innerbody">
+<h1>Create New Account</h1>
 
 <form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
-  <div>
-    <div>
+  <div id="form">
+    <div >
       <mat-form-field>
         <input matInput placeholder="Email" formControlName="email" type="email" required />
       </mat-form-field>
@@ -20,5 +19,8 @@
       </mat-form-field>
     </div>
   </div>
-  <button mat-button class="nav-btn" color="primary" type="submit">Register</button>
+  <div >
+    <button mat-raised-button class="button" type="submit">Register</button>
+  </div>
 </form>
+</body>
