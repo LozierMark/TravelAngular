@@ -9,7 +9,8 @@
   </div>
   <div style="position: absolute; right: 25px;">
     <button routerLink="/register" routerLinkActive="active">Register</button>
-    <button routerLink="/login" routerLinkActive="active">Login</button>
+    <button *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active">Login</button>
+    <span *ngIf="loggedIn">{{welcomeMessage}}</span>
   </div>
 </mat-toolbar>
 
