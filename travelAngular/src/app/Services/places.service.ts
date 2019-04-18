@@ -5,8 +5,8 @@ import { Place } from '../Models/Place';
 // const ApiUrl = "http://127.0.0.1:52366/api";
 // const ApiUrl = "http://localhost:52366/api";
 // const ApiUrl = "http://192.168.1.162:52366/api";
-const ApiUrl = "http://localhost:52366/api";
-// const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
+// const ApiUrl = "http://localhost:52366/api";
+const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
 
 @Injectable({
   providedIn: 'root'
