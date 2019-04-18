@@ -11,6 +11,7 @@
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
       <mat-cell *matCellDef="let place">
         <a routerLink="/placeDetail/{{place.PlaceId}}">{{place.PlaceName}}</a>
+        <!-- <a routerLink="/placeDetail">{{place.PlaceName}}</a> -->
       </mat-cell>
     </ng-container>
 

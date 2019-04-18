@@ -11,13 +11,18 @@ import { PlacesService } from 'src/app/Services/places.service';
 export class PlaceDetailComponent implements OnInit {
 
   place: Place;
+  placeImageUrl_: string;
+  placeImageStyle: string;
 
   constructor(private _activatedRoute: ActivatedRoute, private _placeService: PlacesService) { }
 
   ngOnInit() {
+    var k = null;
     this._activatedRoute.paramMap.subscribe(routeData => {
       this._placeService.getPlace(routeData.get('id')).subscribe((singlePlace: Place) => {
         this.place = singlePlace;
+        this.placeImageUrl_ = this.place.PlaceImageUrl;
+        this.placeImageStyle = `background-image: url(${this.placeImageUrl_});`;
       });
     });
   }
