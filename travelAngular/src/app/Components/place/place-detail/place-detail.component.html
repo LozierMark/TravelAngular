@@ -1,31 +1,42 @@
-<h1>Details</h1>
+<div>
+    <label for="PlaceName"> Name:</label>
+    <span>{{place.PlaceName}}</span>
+    </div>
+
+
+
 
 <hr>
 <div *ngIf="place">
 </div>
 
 <div>
-  <label for="PlaceId">PlaceId:</label>
-  <span>{{place.PlaceId}}</span>
-</div>
-
-<div>
-  <label for="PlaceName">Place Name:</label>
+  <label for="PlaceName"> Name:</label>
   <span>{{place.PlaceName}}</span>
-</div>
+  </div>
 
-<div>
-    <label for="PlaceLocation">Place Location:</label>
+  <div>
+    <label for="PlaceLocation">Location:</label>
     <span>{{place.PlaceLocation}}</span>
   </div>
 
   <div>
-      <label for="PlaceDescription">Place Description:</label>
+      <label for="PlaceDescription"> Description:</label>
       <span>{{place.PlaceDescription}}</span>
     </div>
 
     <div>
-        <label for="PlaceImageURL">Place ImageURL:</label>
+        <label for="googleMap"> Google Map:</label>
+        <span>{{place.GoogleMap}}</span>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.87654629221!2d-86.01050395790213!3d39.966512784651094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8814b476e095e67f%3A0xf30febeda02337ab!2s12175+Visionary+Way%2C+Fishers%2C+IN+46038!5e0!3m2!1sen!2sus!4v1555601891735!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+      <div>
+        <a href="https://www.expedia.com/"><h2> Expedia:</h2> </a>
+      </div>
+
+    <div>
+        <label for="PlaceImageURL">Image:</label>
         <span>{{place.PlaceImageURL}}</span>
       </div>
 
