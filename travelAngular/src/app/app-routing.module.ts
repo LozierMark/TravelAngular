@@ -19,6 +19,7 @@ const routes = [
   { path: 'places', component:PlaceIndexComponent},
   { path: 'placeCreate', component:PlaceCreateComponent},
   { path: 'placeDetail/:id',component:PlaceDetailComponent},
+  // { path: 'placeDetail',component:PlaceDetailComponent},
   { path: 'placeEdit', component:PlaceEditComponent},
   { path: 'placeDelete',component:PlaceDeleteComponent},
   { path: 'about', component: AboutComponent },

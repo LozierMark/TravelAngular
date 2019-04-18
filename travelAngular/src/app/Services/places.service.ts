@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Place } from '../Models/Place';
+import { Observable } from 'rxjs';
 
 // const ApiUrl = "http://127.0.0.1:52366/api";
 // const ApiUrl = "http://localhost:52366/api";
 // const ApiUrl = "http://192.168.1.162:52366/api";
-const ApiUrl = "http://localhost:52366/api";
-// const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
+// const ApiUrl = "http://localhost:52366/api";
+const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,9 @@ export class PlacesService {
    }
 
   getPlace(id: string) {
-    return this._http.get(`${ApiUrl}/place/${id}`);
+    var k = (this._http.get(`${ApiUrl}/place/${id}`));
+    k.subscribe(function(e) {console.log(e)});
+    return k;
   }
 
   createPlace(place: Place) {
