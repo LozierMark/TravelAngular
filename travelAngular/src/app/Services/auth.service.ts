@@ -7,8 +7,8 @@ import { Observable, Subject } from 'rxjs'
 import { getLocaleMonthNames } from '@angular/common';
 
 
-const ApiUrl = "http://localhost:52366/api";
-// const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
+// const ApiUrl = "http://localhost:52366";
+const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net"
 
 @Injectable({
   providedIn: 'root'
@@ -20,14 +20,14 @@ export class AuthService {
   constructor(private _http: HttpClient, private _router: Router) { }
 
   register(regUserData: RegisterUser) {
-    return this._http.post(`${ApiUrl}/Account/Register`, regUserData);
+    return this._http.post(`${ApiUrl}/api/Account/Register`, regUserData);
   }
 
   login(loginInfo) {
     const str = 
     `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
       
-    return this._http.post(`${ApiUrl}/Token`, str).subscribe( (token: Token) => {
+    return this._http.post(`${ApiUrl}/token`, str).subscribe( (token: Token) => {
       localStorage.setItem('id_token', token.access_token);
       this.isLoggedIn.next(true);
       this._router.navigate(['/']);
