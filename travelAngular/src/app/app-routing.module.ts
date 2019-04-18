@@ -28,7 +28,7 @@ const routes = [
   // },
   { path: 'places', component:PlaceIndexComponent},
   { path: 'placeCreate', component:PlaceCreateComponent},
-  { path: 'placeDetail',component:PlaceDetailComponent},
+  { path: 'placeDetail/:id',component:PlaceDetailComponent},
   { path: 'placeEdit', component:PlaceEditComponent},
   { path: 'placeDelete',component:PlaceDeleteComponent},
   { path: 'About', component: AboutComponent },
