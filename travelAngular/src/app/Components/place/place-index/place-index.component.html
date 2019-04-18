@@ -1,17 +1,22 @@
 <body id="innerbody">
+    <button id="button" mat-raised-button routerLink="/placeCreate">Add a Place</button>
+  <div id="buttonRow">
    <h1>All Places</h1>
+  </div>
     <mat-table id="table" [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
     
     <ng-container matColumnDef="PlaceName">
       <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-      <mat-cell *matCellDef="let place" routerLink="/placeDetail/id"> {{place.PlaceName}}</mat-cell>
+      <mat-cell *matCellDef="let place">
+        <a routerLink="/placeDetail/{{place.PlaceId}}">{{place.PlaceName}}</a>
+      </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="PlaceLocation">
       <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
-      <mat-cell *matCellDef="let place" routerLink="/placeDetail/PlaceId"> {{place.PlaceLocation}}</mat-cell>
+      <mat-cell *matCellDef="let place" > {{place.PlaceLocation}}</mat-cell>
     </ng-container>
 
     <!-- <ng-container matColumnDef="PlaceDescription">

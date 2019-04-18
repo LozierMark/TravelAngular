@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { TagRequest } from '../Models/TagRequest';
 
-const ApiUrl = 'http://'
+// const ApiUrl = 'http://'
+const ApiUrl = "http://localhost:52366/api";
 
 @Injectable({
   providedIn: 'root'

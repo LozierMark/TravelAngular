@@ -1,22 +1,27 @@
-<p>
-  login works!
-</p>
-<body>
+<body id="innerbody">
 
-
-  <br>
-  <div class="container">
-    <h1>
-      <b>login #Travel :</b>
-    </h1>
-    <p>
-      The Rogue Garden Center is your best choice in gardening. Donec laoreet, dolor sed euismod porttitor, neque neque
-      pharetra erat, id ultricies massa nisl ac lacus. Vestibulum suscipit commodo ante quis tincidunt. In hac habitasse
-      platea dictumst. Quisque at augue quis tortor euismod tincidunt nec id magna. Quisque at augue quis tortor euismo.
-      <br>
-      <br>
-      
-    </p>
-  </div>
-  <br>
-  <hr>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="loginForm">
+      <div class="form">
+          <h1>Login</h1>
+        <div >
+          <mat-form-field style="width: 90%;">
+            <input matInput placeholder="Email" formControlName="email" type="email" required />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 90%;">
+            <input matInput placeholder="Password" formControlName="password" type="password" required />
+          </mat-form-field>
+        </div>
+        <!-- <div>
+          <mat-form-field style="width: 90%;">
+            <input matInput placeholder="Comfirm Password" formControlName="comfirmPassword" type="password" required />
+          </mat-form-field>
+        </div> -->
+        <button mat-raised-button class="button" type="submit">Login</button>
+        <br>
+        <br>
+        <button mat-raised-button class="button" routerLink="/register">Register as a new user</button>
+      </div>
+    </form>
+    </body>
