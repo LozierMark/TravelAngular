@@ -17,9 +17,9 @@ export class RegisterComponent implements OnInit {
   }
   createForm() {
     this._registerForm = this._form.group({
-      email: new FormControl,
-      password: new FormControl,
-      comfirmPassword: new FormControl,
+      Email: new FormControl,
+      Password: new FormControl,
+      ConfirmPassword: new FormControl,
     });
   }
   onSubmit() {
