@@ -15,25 +15,15 @@ import { PlaceDeleteComponent } from './Components/place/place-delete/place-dele
 
 const routes = [
   { path: '', component: HomeComponent},
-  { path: 'Home',   component: HomeComponent},
-  // {
-  //   path: 'places',
-  //   children: [
-  //     {path:'', component:PlaceIndexComponent},
-  //     {path:'create',component:PlaceCreateComponent},
-  //     {path:'detail/:id',component:PlaceDetailComponent},
-  //     {path:'edit/:id',component:PlaceEditComponent},
-  //     {path:'delete/:id',component:PlaceDeleteComponent}
-  //   ]
-  // },
+  { path: 'home',   component: HomeComponent},
   { path: 'places', component:PlaceIndexComponent},
   { path: 'placeCreate', component:PlaceCreateComponent},
   { path: 'placeDetail/:id',component:PlaceDetailComponent},
   { path: 'placeEdit', component:PlaceEditComponent},
   { path: 'placeDelete',component:PlaceDeleteComponent},
-  { path: 'About', component: AboutComponent },
-  { path: 'Register', component: RegisterComponent },
-  { path: 'Login', component: LoginComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'tags' , component: TagIndexComponent},
   { path: 'tagRequests', component: TagRequestIndexComponent },
   { path: 'tagRequests/create', component: TagRequestCreateComponent },
