@@ -2,8 +2,9 @@ body{
 
     background-size: cover;
     background-image: url("../../../assets/map.jpg");
+    filter: grayscale(100%);
   }
-
+  
 
 
 h4{
