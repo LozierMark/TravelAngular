@@ -1,0 +1,10 @@
+body{
+    background-image: url("../../../../assets/CitySunBW.jpeg");
+    background-size: cover;
+    margin: 0px;
+    padding-top: 10px;
+}
+p {
+    font-family: 'Merienda One', cursive;
+    font-size: 20pt
+}
