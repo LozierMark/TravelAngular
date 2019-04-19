@@ -1,44 +1,23 @@
 
-  body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-size: 100%;
-    background-image: url("src/assets/adventuremap.jpg");
+body{
+  background-size: cover;
+  margin: 0px;
+  padding-top: 10px;
+  background-image: url("../../../assets/sandBW.jpeg");
 }
-   
-#name,#email,#message {
-  font-size: 15pt;
-  color:plum;
+ 
+#message {
+height: 150px;
+width: 90%;
 }
-
-h1{
-  font-family: 'Merienda One', cursive;
-  font-size: 30px;
-  color:purple;
-}
-
-label{
-  font-family: 'Merienda One', cursive;
-  font-size: 30px;
-  color:purple;
+.container {
+background-color: rgb(243, 234, 234, .4);
+margin: 0% 5% 0% 5%;
+text-align: center;
+padding-bottom: 5px;
 }
 p {
-  font-family: 'Merienda One', cursive;
-font-size: 19px;
+font-family: 'Merienda One', cursive;
+font-size: 13px;
 color:black;
 }
-h4{
-  font-family: 'Merienda One', cursive;
-  font-size: 30px;
-  color:plum;
-
-    
-}
-.center {
-    font-size: 40px;
-    font-weight: 100;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
-  }
