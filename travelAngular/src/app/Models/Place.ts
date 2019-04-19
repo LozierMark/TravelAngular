@@ -5,7 +5,7 @@ export interface Place {
     PlaceName: string;
     PlaceLocation: string;
     PlaceDescription: string;
-    PlaceImageUrl: string;
+    PlaceImageUrl?: string;
     SubmittedUTC?: Date;
     ModifiedUTC?: Date;
     SubmittingUserId?: number;

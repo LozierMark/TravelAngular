@@ -11,11 +11,18 @@ button {
     font-family: 'Merienda One', cursive;
 }
 button:hover {
-    text-shadow: 0px 0px 15px #FF0;
+    text-shadow: 0px 0px 15px yellow;
 }
 .title {
     font-family: 'Merienda One', cursive;
     font-size: 30px;
     color: white;
-    margin: 40%;
+    margin-left: 15vw;
+}
+#welcome {
+    color: orange;
+    font-family: 'Merienda One', cursive;
+    font-size: 15px;
+    margin-left: 10vw;
+
 }

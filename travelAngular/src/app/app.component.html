@@ -4,13 +4,16 @@
   <button routerLink="/about" routerLinkActive="active">About</button> 
   <button routerLink="/places" routerLinkActive="active>">Browse all Places</button>
   <button routerLink="/tags" routerLinkActive="active">Browse all #s</button>
+
   <div class="title">
     <p> #Travel</p>
   </div>
+  <span *ngIf="loggedIn" id="welcome">{{welcomeText}}!</span>
+
   <div style="position: absolute; right: 25px;">
+    <button *ngIf="loggedIn"(click)="logout()">Logout</button>
     <button routerLink="/register" routerLinkActive="active">Register</button>
     <button *ngIf="!loggedIn" routerLink="/login" routerLinkActive="active">Login</button>
-    <span *ngIf="loggedIn">{{welcomeMessage}}</span>
   </div>
 </mat-toolbar>
 

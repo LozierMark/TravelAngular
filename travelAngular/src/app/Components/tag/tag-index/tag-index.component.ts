@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TagsService } from '../../../Services/tags.service';
 import { Tag } from '../../../Models/Tag';
-import { MatTableDataSource } from '@angular/material';
+// import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-tag-index',
@@ -10,14 +10,16 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class TagIndexComponent implements OnInit {
 
-  dataSource: MatTableDataSource<Tag>;
-  columnNames = ['TagName'];
+  tags:Tag[]
+  // dataSource: MatTableDataSource<Tag>;
+  // columnNames = ['TagName'];
 
   constructor(private _tagsService: TagsService) { }
 
   ngOnInit() {
     this._tagsService.getTags().subscribe((tags: Tag[]) => {
-      this.dataSource = new MatTableDataSource<Tag>(tags);
+      this.tags=tags;
+      // this.dataSource = new MatTableDataSource<Tag>(tags);
   });
 
   }
