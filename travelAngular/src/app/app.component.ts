@@ -28,9 +28,11 @@ export class AppComponent {
     } else {
       this.welcomeText = "Not Logged In";
     }
-
-
+  }
+  logout() {
+    this._authService.logout();
+   };
   }
 
-}
+
 
