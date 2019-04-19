@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+
+    min-height: 100%;
+}
+body{
+
+    min-height: 100vh;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family:'Merienda One', cursive;
+}
+.button {
+    color: white;
+    font-family: 'Merienda One', cursive;
+    border: 1px solid #000;
+    width: 225px;
+    background-color: black;
+    margin-left: 40vw;
+    
+}
+.button:hover {
+    color: orange;
+}
+h-tag {
+    line-height: 18pt;
+}
+.form {
+        background-color: rgb(243, 234, 234, .7);
+        margin: 0% 30% 0% 30%;
+        text-align: center;
+        padding: 10px 10px 10px 10px;
+}

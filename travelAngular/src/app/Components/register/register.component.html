@@ -1,0 +1,26 @@
+<body id="innerbody">
+
+<form (ngSubmit)="onSubmit()" [formGroup]="_registerForm">
+  <div class="form">
+      <h1>Create New Account</h1>
+    <div >
+      <mat-form-field style="width: 90%;">
+        <input matInput placeholder="Email" formControlName="Email" type="email" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field style="width: 90%;">
+        <input matInput placeholder="Password" formControlName="Password" type="password" required />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field style="width: 90%;">
+        <input matInput placeholder="Comfirm Password" formControlName="ConfirmPassword" type="password" required />
+      </mat-form-field>
+    </div>
+    <button mat-raised-button class="button" type="submit">Register</button>
+  </div>
+  <div >
+  </div>
+</form>
+</body>

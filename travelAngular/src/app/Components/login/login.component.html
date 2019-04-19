@@ -1,0 +1,27 @@
+<body id="innerbody">
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="loginForm">
+      <div class="form">
+          <h1>Login</h1>
+        <div >
+          <mat-form-field style="width: 90%;">
+            <input matInput placeholder="Email" formControlName="email" type="email" required />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 90%;">
+            <input matInput placeholder="Password" formControlName="password" type="password" required />
+          </mat-form-field>
+        </div>
+        <!-- <div>
+          <mat-form-field style="width: 90%;">
+            <input matInput placeholder="Comfirm Password" formControlName="comfirmPassword" type="password" required />
+          </mat-form-field>
+        </div> -->
+        <button mat-raised-button class="button" type="submit">Login</button>
+        <br>
+        <br>
+        <button mat-raised-button class="button" routerLink="/register">Register as a new user</button>
+      </div>
+    </form>
+    </body>

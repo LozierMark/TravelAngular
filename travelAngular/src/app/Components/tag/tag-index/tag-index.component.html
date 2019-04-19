@@ -1,0 +1,12 @@
+<div>
+  <mat-table #table [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+
+    <ng-container matColumnDef="TagName">
+      <mat-header-cell *matHeaderCellDef> All Tags </mat-header-cell>
+      <mat-cell *matCellDef="let tag"> <h-tag>{{tag.TagName}}</h-tag></mat-cell>
+    </ng-container>
+    </mat-table>
+</div>
+<body></body>

@@ -1,0 +1,53 @@
+<body id="innerbody">
+    <button id="button" mat-raised-button routerLink="/placeCreate">Add a Place</button>
+  <div id="buttonRow">
+   <h1>All Places</h1>
+  </div>
+    <mat-table id="table" [dataSource]="dataSource">
+    <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
+    
+    <ng-container matColumnDef="PlaceName">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let place">
+        <a routerLink="/placeDetail/{{place.PlaceId}}">{{place.PlaceName}}</a>
+        <!-- <a routerLink="/placeDetail">{{place.PlaceName}}</a> -->
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="PlaceLocation">
+      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
+      <mat-cell *matCellDef="let place" > {{place.PlaceLocation}}</mat-cell>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="PlaceDescription">
+      <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+      <mat-cell *matCellDef="let place"> {{place.PlaceDescription}}</mat-cell>
+    </ng-container> -->
+
+    <!-- <ng-container matColumnDef="PlaceImageUrl">
+      <mat-header-cell *matHeaderCellDef> Image </mat-header-cell>
+      <mat-cell *matCellDef="let place"> {{place.PlaceImageUrl}}</mat-cell>
+    </ng-container> -->
+
+    <ng-container matColumnDef="#s">
+      <mat-header-cell *matHeaderCellDef> #s </mat-header-cell>
+      <mat-cell *matCellDef="let place"> {{place.tags}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+      <mat-header-cell *matHeaderCellDef class="matColumnSize"></mat-header-cell>
+      <mat-cell *matCellDef="let place" routerLink="/places/detail/{{place.PlaceId}}">
+      <i class="material-icons">library_books</i>
+    </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+      <mat-cell *matCellDef="let place">
+        <i mat-icon class="material-icons" routerLink="places/edit/{{place.PlaceId}}">edit</i>
+      </mat-cell>
+    </ng-container>
+    
+  </mat-table>
+</body>

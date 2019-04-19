@@ -1,0 +1,23 @@
+label {
+
+    font-size: 20pt
+    
+}
+
+#right {
+    width:50%;
+    /* height:100%; */
+}
+
+#image {
+    /* background-image: url(https://duckduckgo.com/i/6ed876c7.jpg); */
+    width: 50vw;
+    height: 100%;
+    /* background-repeat: no-repeat; */
+    /* background-size: 100% 100%; */
+}
+
+#google {
+    width: 100%;
+    height: 100%;
+}
