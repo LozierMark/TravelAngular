@@ -32,6 +32,8 @@ import { PlaceEditComponent } from './Components/place/place-edit/place-edit.com
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 import { AuthService } from './Services/auth.service';
 import { AwesomeComponentComponent } from './Components/awesome-component/awesome-component.component';
+import { TagRequestDetailComponent } from './components/tagRequest/tag-request-detail/tag-request-detail.component';
+import { TagRequestDeleteComponent } from './components/tagRequest/tag-request-delete/tag-request-delete.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { AwesomeComponentComponent } from './Components/awesome-component/awesom
     PlaceCreateComponent,
     PlaceEditComponent,
     PlaceDeleteComponent,
-    AwesomeComponentComponent
+    AwesomeComponentComponent,
+    TagRequestDetailComponent,
+    TagRequestDeleteComponent
   ],
   imports: [
     AppRoutingModule,

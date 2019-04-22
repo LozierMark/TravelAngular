@@ -12,6 +12,8 @@ import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-c
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
+import { TagRequestDetailComponent } from './components/tagRequest/tag-request-detail/tag-request-detail.component';
+import { TagRequestDeleteComponent } from './Components/tagRequest/tag-request-delete/tag-request-delete.component';
 
 const routes = [
   { path: '', component: HomeComponent},
@@ -19,7 +21,6 @@ const routes = [
   { path: 'places', component:PlaceIndexComponent},
   { path: 'placeCreate', component:PlaceCreateComponent},
   { path: 'placeDetail/:id',component:PlaceDetailComponent},
-  // { path: 'placeDetail',component:PlaceDetailComponent},
   { path: 'placeEdit', component:PlaceEditComponent},
   { path: 'placeDelete',component:PlaceDeleteComponent},
   { path: 'about', component: AboutComponent },
@@ -28,6 +29,9 @@ const routes = [
   { path: 'tags' , component: TagIndexComponent},
   { path: 'tagRequests', component: TagRequestIndexComponent },
   { path: 'tagRequests/create', component: TagRequestCreateComponent },
+  { path: 'tagRequests/detail/:id', component: TagRequestDetailComponent },
+  { path: 'tagRequests/delete/:id', component: TagRequestDeleteComponent}
+
 ];
 
 @NgModule({

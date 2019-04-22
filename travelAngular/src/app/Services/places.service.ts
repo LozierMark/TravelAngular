@@ -38,7 +38,7 @@ export class PlacesService {
   editPlace(place: Place) {
     return this._http.put(`${ApiUrl}/place`, place, { headers: this.getHeaders()});
   }
-  deletePlace(id:number) {
+  deletePlace(id:string) {
     return this._http.delete(`${ApiUrl}/place/${id}`, { headers: this.getHeaders() });
   }
 }
