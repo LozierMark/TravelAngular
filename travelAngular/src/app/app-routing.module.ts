@@ -13,24 +13,20 @@ import { PlaceCreateComponent } from './Components/place/place-create/place-crea
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 import { SearchComponent } from './Components/place/search/search.component'
-// import { SearchModule } from './Component/place/search.component'
+import { TagRequestDetailComponent } from './components/tagRequest/tag-request-detail/tag-request-detail.component';
+import { TagRequestDeleteComponent } from './Components/tagRequest/tag-request-delete/tag-request-delete.component';
 
 const routes = [
-  { path: '', component: HomeComponent },
-  { path: 'home',   component: HomeComponent },
-  { path: 'places', component:PlaceIndexComponent },
-  { path: 'placeCreate', component:PlaceCreateComponent },
-  { path: 'placeDetail/:id',component:PlaceDetailComponent },
   { path: 'placeSearch', component:SearchComponent },
-  // { path: 'placeDetail',component:PlaceDetailComponent},
-  { path: 'placeEdit', component:PlaceEditComponent },
-  { path: 'placeDelete',component:PlaceDeleteComponent },
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tags' , component: TagIndexComponent },
   { path: 'tagRequests', component: TagRequestIndexComponent },
   { path: 'tagRequests/create', component: TagRequestCreateComponent },
+  { path: 'tagRequests/detail/:id', component: TagRequestDetailComponent },
+  { path: 'tagRequests/delete/:id', component: TagRequestDeleteComponent}
+
 ];
 
 @NgModule({

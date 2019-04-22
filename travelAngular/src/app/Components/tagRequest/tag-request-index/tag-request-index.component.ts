@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TagRequestsService } from 'src/app/Services/tagRequests.service';
 import { TagRequest } from '../../../Models/TagRequest'
 import { MatTableDataSource } from '@angular/material';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tag-request-index',
@@ -10,22 +11,25 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class TagRequestIndexComponent implements OnInit {
 
+
   dataSource: MatTableDataSource<TagRequest>;
-  columnNames = ['TagRequestName','TagRequestUserName', 'TagRequestDate', 'TagRequestPlace', 'Accept', 'Deny'];
+  columnNames = ['TagRequestName','TagRequestUserName', 'TagRequestDate', 'TagRequestPlace', 'details'];
+  tagRequest: TagRequest;
 
-  constructor(private _tagRequestsService: TagRequestsService) { }
-
+  constructor(private _activatedRoute: ActivatedRoute, private _tagRequestsService: TagRequestsService) {
+  // private _ar: ActivatedRoute, private _router: Router) {
+  //   this._ar.paramMap.subscribe(p => {
+  //     this._tagRequestsService.getTagRequest(p.get('id')).subscribe((singleTagRequest: TagRequest)=> {
+  //       this.tagRequest = singleTagRequest;
+      // });
+    };
+  
   ngOnInit() {
     this._tagRequestsService.getTagRequests().subscribe((tagRequests: TagRequest[]) => { 
       this.dataSource = new MatTableDataSource<TagRequest>(tagRequests);
-  });
-
-  onDelete() {
-    this._tagRequestsService.deleteTagRequest(this._tagRequest.TagRequestId).subscribe(() => {
-      this._router.navigate(['/tagRequests']);
     });
-
+    };
   }
-}
 
-}
+
+

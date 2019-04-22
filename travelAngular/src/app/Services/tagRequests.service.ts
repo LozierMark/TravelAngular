@@ -9,6 +9,9 @@ const ApiUrl = "http://localhost:52366/api";
   providedIn: 'root'
 })
 export class TagRequestsService {
+  getTagRequest(id: string) {
+    return this._http.get(`${ApiUrl}/tagRequests/&{id}`, { headers: this.getHeaders()});
+  }
 
   constructor(private _http: HttpClient) { }
 
@@ -24,7 +27,7 @@ export class TagRequestsService {
     return this._http.post(`${ApiUrl}/tagRequests`, tagRequest, { headers: this.getHeaders()});
   }
 
-  deleteTagRequest(id: number) {
+  deleteTagRequest(id: string) {
     return this._http.delete(`${ApiUrl}/TagRequests/${id}`, {headers: this.getHeaders()});
   }
 }
