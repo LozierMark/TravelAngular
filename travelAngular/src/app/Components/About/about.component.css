@@ -3,7 +3,7 @@ body{
   background-size: cover;
   margin: 0px;
   padding-top: 10px;
-  /* background-image: url("../../../assets/sandBW.jpeg"); */
+  background-image: url("../../../assets/sandBW.jpeg");
 }
 
 #message {

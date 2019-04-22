@@ -23,4 +23,8 @@ export class TagRequestsService {
   createTagRequest(tagRequest: TagRequest) {
     return this._http.post(`${ApiUrl}/tagRequests`, tagRequest, { headers: this.getHeaders()});
   }
+
+  deleteTagRequest(id: number) {
+    return this._http.delete(`${ApiUrl}/TagRequests/${id}`, {headers: this.getHeaders()});
+  }
 }
