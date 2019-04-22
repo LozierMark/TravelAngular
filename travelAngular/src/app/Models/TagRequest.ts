@@ -1,5 +1,5 @@
 export interface TagRequest {
-    TagRequestId?: number;
+    TagRequestId?: string;
     TagRequestName?: string;
     TagRequestUserName?: string;
     TagRequestDate?: Date;

@@ -23,4 +23,13 @@ export class TagIndexComponent implements OnInit {
   });
 
   }
+  tagDelete(id,name) {
+    if (confirm("Are you sure you want to delete the tag \""+name+"\"")) {
+      this._tagsService.tagDelete(id);
+    }
+  }
+  tagCreate() {
+    var name = prompt("What should the new tag be called?");
+    if (name) this._tagsService.tagCreate(name);
+  }
 }

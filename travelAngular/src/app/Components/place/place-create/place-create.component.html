@@ -1,6 +1,11 @@
 <body id="innerbody">
 
-<form (ngSubmit)="onSubmit()" [formGroup]="_placeForm">
+<div id="Z" style="display:none;" #jsonOutput>{{JSON.stringify(tagService.getTags())}}</div>
+<!-- <div id="ALLTAGS">
+  <span *ngFor="let k of getTags_()" id="{{k.TagId}}">{{k.TagName}}</span>
+</div> -->
+
+<form (ngSubmit)="onSubmit(getTagData())" [formGroup]="_placeForm">
     <div id="form">
     <h1>Add a New Place</h1>
     <div>
@@ -20,14 +25,36 @@
     </div>
     <div>
         <mat-form-field style="width: 90%">
-            <input matInput placeholder="Place Image Url" formControlName="PlaceImageUrl" type="text" required/>
+            <input matInput placeholder="Place Image Url" formControlName="PlaceImageUrl" type="text"/>
       </mat-form-field>
+    </div>
+    <div>
+      <ul id="tagCont">
+      </ul>
+      <select id="tagSelector">
+        <option *ngFor="let tag of allTags" value="{{tag.TagId}}">{{tag.TagName}}</option>
+      </select>
+      <button onclick="event.preventDefault(); addTag();">+Tag</button>
     </div>
     <button class="button" mat-raised-button type="submit">Add Place</button>
     <br>
     <br>
     <button class="button" mat-raised-button routerLink="/places">Back to All Places</button>
   </div>
+  <div *ngIf="refreshTagsOutput">{{refreshTagsOutput()}}</div>
+  <john-script src="/assets/placeCreate.js"></john-script>
+  <!-- <script>
+    document.body.innerHTML += `<script src=""></script>`;
+    eval(`function addTag() Xbr
+      tagCont.innerHTML += `<h-tag id="${tagSelector.value}">${allTags.filter(function(e) {e.TagId == tagSelector.value})[0].TagName}</h-tag>`;
+      document.getElementById(tagSelector.value).tagId = tagSelector.value;
+    Xbr
+    function getTagData() Xbr
+      var tgd = [];
+      for (var k of document.getElementById("tagSelector").children) tgd.push(k.tagId);
+      return tgd;
+    Xbr`);
+  </script> -->
 </form>
 </body>
 
