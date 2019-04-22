@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material';
 export class TagRequestIndexComponent implements OnInit {
 
   dataSource: MatTableDataSource<TagRequest>;
-  columnNames = ['TagRequestId','TagRequestName','TagRequestUserName', 'TagRequestDate', 'TagRequestPlace'];
+  columnNames = ['TagRequestName','TagRequestUserName', 'TagRequestDate', 'TagRequestPlace', 'Accept', 'Deny'];
 
   constructor(private _tagRequestsService: TagRequestsService) { }
 
@@ -19,6 +19,13 @@ export class TagRequestIndexComponent implements OnInit {
     this._tagRequestsService.getTagRequests().subscribe((tagRequests: TagRequest[]) => { 
       this.dataSource = new MatTableDataSource<TagRequest>(tagRequests);
   });
+
+  onDelete() {
+    this._tagRequestsService.deleteTagRequest(this._tagRequest.TagRequestId).subscribe(() => {
+      this._router.navigate(['/tagRequests']);
+    });
+
+  }
 }
 
 }

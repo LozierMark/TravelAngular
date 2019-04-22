@@ -1,14 +1,14 @@
 import { Tag } from "./Tag";
 
 export interface Place {
-    PlaceId?: number;
+    PlaceId?: string;
     PlaceName: string;
     PlaceLocation: string;
     PlaceDescription: string;
     PlaceImageUrl?: string;
     SubmittedUTC?: Date;
     ModifiedUTC?: Date;
-    SubmittingUserId?: number;
-    ModifyingUserId?: number;
+    SubmittingUserId?: string;
+    ModifyingUserId?: string;
     Tags?: Tag[];
 }

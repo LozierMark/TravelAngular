@@ -1,9 +1,17 @@
-body{
+#innerbody {
     background-image: url("../../../../assets/CitySunBW.jpeg");
     background-size: cover;
     margin: 0px;
     padding-top: 10px;
-}
+  }
+
+#form {
+    background-color: rgb(243, 234, 234, .7);
+    margin: 0% 20% 0% 20%;
+    text-align: center;
+  }
+
+
 p {
     font-family: 'Merienda One', cursive;
     font-size: 20pt

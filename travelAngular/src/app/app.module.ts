@@ -32,6 +32,7 @@ import { PlaceEditComponent } from './Components/place/place-edit/place-edit.com
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 import { AuthService } from './Services/auth.service';
 import { SearchComponent } from './Components/place/search/search.component';
+import { AwesomeComponentComponent } from './Components/awesome-component/awesome-component.component';
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { SearchComponent } from './Components/place/search/search.component';
     PlaceEditComponent,
     PlaceDeleteComponent,
     SearchComponent
+    AwesomeComponentComponent
   ],
   imports: [
     AppRoutingModule,
