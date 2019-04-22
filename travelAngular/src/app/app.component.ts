@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './Services/auth.service';
+import { ApiUrl } from './Services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,7 @@ export class AppComponent {
   }
   logout() {
     this._authService.logout();
+    setTimeout(()=>{window.location.href = "/"},1000);
    };
   }
 

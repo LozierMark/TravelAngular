@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { from } from 'rxjs';
 import { Place } from 'src/app/Models/Place';
 import { formArrayNameProvider } from '@angular/forms/src/directives/reactive_directives/form_group_name';
+import { TagsService } from 'src/app/Services/tags.service';
 
 @Component({
   selector: 'app-place-edit',
@@ -18,7 +19,8 @@ export class PlaceEditComponent implements OnInit {
   constructor(private _form: FormBuilder,
     private _placeService: PlacesService,
     private _ar: ActivatedRoute,
-    private _router: Router) {
+    private _router: Router,
+    tagService: TagsService) {
 
     this._ar.paramMap.subscribe(p => {
       this._placeService.getPlace(p.get('id')).subscribe((singlePlace: Place) => {

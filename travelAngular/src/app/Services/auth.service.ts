@@ -10,7 +10,7 @@ import { UserInfo } from '../Models/UserInfo';
 
 
 // const ApiUrl = "http://localhost:52366";
-const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net"
+export const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net"
 
 @Injectable({
   providedIn: 'root'
@@ -52,7 +52,7 @@ export class AuthService {
     const authHeader = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
 
     this._http.post(`${ApiUrl}/api/Account/Logout`, {headers: authHeader } ) ;
-    this._router.navigate(['/login']);
+    this._router.navigate(['/']);
   }
 
   currentUser(): Observable<Object> {

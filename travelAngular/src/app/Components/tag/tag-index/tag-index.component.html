@@ -5,7 +5,8 @@
 </body> -->
 <body>
 <ul>
-  <li *ngFor="let tag of tags"><h-tag>{{tag.TagName}}</h-tag>
+  <li *ngFor="let tag of tags"><h-tag>{{tag.TagName}}&nbsp;&nbsp;<a (click)="tagDelete(tag.TagId,tag.TagName);">X</a></h-tag>
   </li>
+  <li><h-tag (click)="tagCreate();" style="background-color:aqua;">New</h-tag></li>
 </ul>
 </body>
