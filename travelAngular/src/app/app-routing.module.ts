@@ -12,20 +12,23 @@ import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-c
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
+import { SearchComponent } from './Components/place/search/search.component'
+// import { SearchModule } from './Component/place/search.component'
 
 const routes = [
-  { path: '', component: HomeComponent},
-  { path: 'home',   component: HomeComponent},
-  { path: 'places', component:PlaceIndexComponent},
-  { path: 'placeCreate', component:PlaceCreateComponent},
-  { path: 'placeDetail/:id',component:PlaceDetailComponent},
+  { path: '', component: HomeComponent },
+  { path: 'home',   component: HomeComponent },
+  { path: 'places', component:PlaceIndexComponent },
+  { path: 'placeCreate', component:PlaceCreateComponent },
+  { path: 'placeDetail/:id',component:PlaceDetailComponent },
+  { path: 'placeSearch', component:SearchComponent },
   // { path: 'placeDetail',component:PlaceDetailComponent},
-  { path: 'placeEdit', component:PlaceEditComponent},
-  { path: 'placeDelete',component:PlaceDeleteComponent},
+  { path: 'placeEdit', component:PlaceEditComponent },
+  { path: 'placeDelete',component:PlaceDeleteComponent },
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'tags' , component: TagIndexComponent},
+  { path: 'tags' , component: TagIndexComponent },
   { path: 'tagRequests', component: TagRequestIndexComponent },
   { path: 'tagRequests/create', component: TagRequestCreateComponent },
 ];
