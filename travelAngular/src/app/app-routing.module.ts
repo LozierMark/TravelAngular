@@ -6,9 +6,9 @@ import { AboutComponent } from './Components/about/about.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
 import { TagIndexComponent } from './Components/tag/tag-index/tag-index.component';
-import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
+// import { TagRequestIndexComponent } from './Components/tagRequest/tag-request-index/tag-request-index.component';
 import { HomeComponent } from './Components/home/home.component';
-import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
+// import { TagRequestCreateComponent } from './Components/tagRequest/tag-request-create/tag-request-create.component';
 import { PlaceCreateComponent } from './Components/place/place-create/place-create.component';
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
@@ -21,13 +21,13 @@ const routes = [
   { path: 'placeDetail/:id',component:PlaceDetailComponent},
   // { path: 'placeDetail',component:PlaceDetailComponent},
   { path: 'placeEdit', component:PlaceEditComponent},
-  { path: 'placeDelete',component:PlaceDeleteComponent},
+  { path: 'placeDelete/:id',component:PlaceDeleteComponent},
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tags' , component: TagIndexComponent},
-  { path: 'tagRequests', component: TagRequestIndexComponent },
-  { path: 'tagRequests/create', component: TagRequestCreateComponent },
+  // { path: 'tagRequests', component: TagRequestIndexComponent },
+  // { path: 'tagRequests/create', component: TagRequestCreateComponent },
 ];
 
 @NgModule({

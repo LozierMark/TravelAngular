@@ -1,0 +1,37 @@
+<body id="innerbody"></body>
+
+<form (ngSubmit)="onSubmit" [formGroup]="_placeForm">
+        <div id="form">
+        <h1>The Edit Page</h1>
+        <div>
+          <mat-form-field style="width: 90%">
+            <input matInput placeholder="Name of Place" formControlName="PlaceName" type="text" required/>
+          </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width: 90%" >
+                <input matInput placeholder="Location" formControlName="PlaceLocation" type="text" required/>
+          </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width: 90%">
+                <textarea matInput placeholder="Description" formControlName="PlaceDescription" type="text" required></textarea>
+          </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field style="width: 90%">
+                <input matInput placeholder="Place Image Url" formControlName="PlaceImageUrl" type="text"/>
+          </mat-form-field>
+        </div>
+        <div>
+          <ul id="tagCont">
+          </ul>
+          <select id="tagSelector">
+            <option *ngFor="let tag of allTags" value="{{tag.TagId}}">{{tag.TagName}}</option>
+          </select>
+          <button onclick="event.preventDefault(); addTag();">+Tag</button>
+        </div>
+        <button class="button" mat-raised-button type="submit">Add Place</button>
+        <br>
+        <br>
+        <button class="button" mat-raised-button routerLink="/places">Back to All Places</button>
