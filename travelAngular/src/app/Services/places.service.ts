@@ -27,6 +27,9 @@ export class PlacesService {
     return k;
   }
 
+  getPlacesWithTags(ids: string[]) {
+    this._http.put(`${ApiUrl}/place`, ids, {headers:this.getHeaders()});
+  }
   createPlace(place: Place,tags: string[]) {
     console.log("Sending Create Request to Server");
     place.Tags=tags.map(function(e) { return { TagId:e,TagName:"" }; });
@@ -42,5 +45,3 @@ export class PlacesService {
     return this._http.delete(`${ApiUrl}/place/${id}`, { headers: this.getHeaders() });
   }
 }
-
-

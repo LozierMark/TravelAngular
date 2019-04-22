@@ -31,6 +31,7 @@ import { PlaceCreateComponent } from './Components/place/place-create/place-crea
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 import { AuthService } from './Services/auth.service';
+import { SearchComponent } from './Components/place/search/search.component';
 import { AwesomeComponentComponent } from './Components/awesome-component/awesome-component.component';
 
 
@@ -49,6 +50,7 @@ import { AwesomeComponentComponent } from './Components/awesome-component/awesom
     PlaceCreateComponent,
     PlaceEditComponent,
     PlaceDeleteComponent,
+    SearchComponent
     AwesomeComponentComponent
   ],
   imports: [
