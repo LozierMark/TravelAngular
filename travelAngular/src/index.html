@@ -10,11 +10,55 @@
   <!-- <link href="https://fonts/googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    j-script { display: none; }
+  </style>
+  <script>
+    window.location.__defineGetter__("searchData",function() {
+      var ff = {};
+      for (var k of window.location.search.substring(1).split("&")) {
+        var g = k.split("=");
+        ff[g[0]] = g[1];
+      }
+      return ff;
+    });
+    window.location.__defineSetter__("searchData",function(dat) {
+      var k = "?";
+      for (var key in dat) {
+        if (k != "?") k += "&";
+        k += `${key}=${dat[key]}`;
+      }
+      this.href = this.href.substring(this.href.indexOf("?"))+k;
+      // this.search = k;
+      // this.reload();
+    });
+  </script>
 </head>
 <body>
   <app-root></app-root>
   <script src="/assets/Drop-Tag.js"></script>
   <script src="/assets/H-Tag.js"></script>
+  <script>
+    function nonspecCustom(str) { customElements.define(str,class extends HTMLElement { constructor() { super(); } }); }
+    for (var k of [
+      "j-script"
+    ]) nonspecCustom(k);
+    String.prototype.replaceAll = function(f,r) {
+      var b = `${this}`;
+      while (b.includes(f)) b = b.replace(f,r);
+      return b;
+    }
+    window.onloads = [
+      ()=>{
+        for (var f of document.getElementsByTagName("j-script")) {
+          console.log(f.outerHTML);
+          f.parentNode = document.body;
+          var contents = f.innerHTML.replaceAll("%br;","}").replaceAll("%bl;","{").replaceAll("&gt;",">").replaceAll("&lt;","<");
+          eval(contents);
+        }
+      }
+    ];
+    window.onload = function(e) { for (var func of window.onloads) func(e); }
   <script src="/assets/placeCreate.js"></script>
   <script>
     customElements.define("john-script",class extends HTMLElement { });

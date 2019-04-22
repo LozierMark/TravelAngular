@@ -31,6 +31,7 @@ import { PlaceCreateComponent } from './Components/place/place-create/place-crea
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 import { AuthService } from './Services/auth.service';
+import { SearchComponent } from './Components/place/search/search.component';
 import { AwesomeComponentComponent } from './Components/awesome-component/awesome-component.component';
 import { TagRequestDetailComponent } from './components/tagRequest/tag-request-detail/tag-request-detail.component';
 import { TagRequestDeleteComponent } from './components/tagRequest/tag-request-delete/tag-request-delete.component';
@@ -51,9 +52,10 @@ import { TagRequestDeleteComponent } from './components/tagRequest/tag-request-d
     PlaceCreateComponent,
     PlaceEditComponent,
     PlaceDeleteComponent,
-    AwesomeComponentComponent,
     TagRequestDetailComponent,
     TagRequestDeleteComponent
+    SearchComponent
+    AwesomeComponentComponent
   ],
   imports: [
     AppRoutingModule,
