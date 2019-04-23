@@ -35,6 +35,7 @@ import { SearchComponent } from './Components/place/search/search.component';
 import { AwesomeComponentComponent } from './Components/awesome-component/awesome-component.component';
 import { TagRequestDetailComponent } from './Components/tagRequest/tag-request-detail/tag-request-detail.component';
 import { TagRequestDeleteComponent } from './Components/tagRequest/tag-request-delete/tag-request-delete.component';
+import { TagRequestAcceptComponent } from './Components/tagRequest/tag-request-accept/tag-request-accept.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { TagRequestDeleteComponent } from './Components/tagRequest/tag-request-d
     TagRequestDetailComponent,
     TagRequestDeleteComponent,
     SearchComponent,
-    AwesomeComponentComponent
+    AwesomeComponentComponent,
+    TagRequestAcceptComponent
   ],
   imports: [
     AppRoutingModule,

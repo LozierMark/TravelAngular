@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, RunGuardsAndResolvers } from '@angular/router';
 import { PlaceIndexComponent } from './Components/place/place-index/place-index.component';
 import { PlaceDetailComponent } from './Components/place/place-detail/place-detail.component';
 import { AboutComponent } from './Components/about/about.component';
@@ -15,6 +15,7 @@ import { PlaceDeleteComponent } from './Components/place/place-delete/place-dele
 import { SearchComponent } from './Components/place/search/search.component'
 import { TagRequestDetailComponent } from './Components/tagRequest/tag-request-detail/tag-request-detail.component';
 import { TagRequestDeleteComponent } from './Components/tagRequest/tag-request-delete/tag-request-delete.component';
+import { TagRequestAcceptComponent } from './Components/tagRequest/tag-request-accept/tag-request-accept.component';
 
 const routes = [
   { path: 'placeSearch', component:SearchComponent },
@@ -24,14 +25,15 @@ const routes = [
   { path: 'tags' , component: TagIndexComponent },
   { path: 'tagRequests', component: TagRequestIndexComponent },
   { path: 'tagRequestCreate/:PlaceId', component: TagRequestCreateComponent },
-  { path: 'tagRequests/detail/:id', component: TagRequestDetailComponent },
-  { path: 'tagRequests/delete/:id', component: TagRequestDeleteComponent},
+  { path: 'tagRequestDetail/:id', component: TagRequestDetailComponent },
+  { path: 'tagRequestDelete/:id', component: TagRequestDeleteComponent},
   { path: 'places', component: PlaceIndexComponent },
   { path: 'placeDetail/:id', component: PlaceDetailComponent },
   { path: 'placeCreate', component: PlaceCreateComponent },
   { path: 'placeEdit/:id', component: PlaceEditComponent },
   { path: 'placeDelete/:id', component: PlaceDeleteComponent },
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'tagRequestAccept/:id', component: TagRequestAcceptComponent }
 ];
 
 @NgModule({

@@ -18,6 +18,10 @@
       <span>{{place.PlaceLocation}}</span>
     </div>
 
+    <div id="tagsList">
+      <h-tag *ngFor="let tag of place.Tags" id="{{tag.TagId}}">{{tag.TagName}}</h-tag>
+    </div>
+
     <div>
       <label for="PlaceDescription"> Description:</label>
       <p>{{place.PlaceDescription}}</p>

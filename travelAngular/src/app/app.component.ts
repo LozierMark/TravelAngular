@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './Services/auth.service';
-import { ApiUrl } from './Services/auth.service';
+import { ApiUrl } from '../environments/environment.prod';
 
 @Component({
   selector: 'app-root',

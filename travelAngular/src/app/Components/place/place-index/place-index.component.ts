@@ -12,12 +12,15 @@ export class PlaceIndexComponent implements OnInit {
   
   dataSource: MatTableDataSource<Place>;
   columnNames = ['PlaceName','PlaceLocation','#s'];
+  JSON = JSON;
+  allPlaces:Place[];
 
   constructor(private _placesService: PlacesService) { }
 
   ngOnInit() {   
     this._placesService.getPlaces().subscribe((places: Place[]) => {
       this.dataSource = new MatTableDataSource<Place>(places);
+      this.allPlaces = places;
     });
   }
  

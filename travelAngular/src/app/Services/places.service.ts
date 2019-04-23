@@ -4,7 +4,8 @@ import { Place } from '../Models/Place';
 import { Observable } from 'rxjs';
 import { Tag } from '../Models/Tag';
 
-const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
+// const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
+import { ApiUrl } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +36,13 @@ export class PlacesService {
     place.Tags=tags.map(function(e) { return { TagId:e,TagName:"" }; });
     console.log(this.getHeaders());
     console.log(localStorage.getItem("id_token"));
-    return this._http.post(`${ApiUrl}/place`, place, {headers:this.getHeaders()});
+    return this._http.post(`${ApiUrl}/place`, {
+      PlaceName: place.PlaceName,
+      PlaceLocation: place.PlaceLocation,
+      PlaceDescription: place.PlaceDescription,
+      PlaceImageUrl: place.PlaceImageUrl,
+      Tags: place.Tags
+    }, {headers:this.getHeaders()});
   }
 
   editPlace(place: Place) {

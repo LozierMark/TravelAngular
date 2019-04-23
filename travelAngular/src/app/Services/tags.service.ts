@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
-const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
+// const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net/api"
 // const ApiUrl = "http://localhost:52366/api";
+import { ApiUrl } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
