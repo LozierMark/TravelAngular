@@ -13,6 +13,7 @@ export class PlaceDetailComponent implements OnInit {
   place: Place;
   placeImageUrl_: string;
   placeImageStyle: string;
+  JSON = JSON;
 
   constructor(private _activatedRoute: ActivatedRoute, private _placeService: PlacesService) { }
 

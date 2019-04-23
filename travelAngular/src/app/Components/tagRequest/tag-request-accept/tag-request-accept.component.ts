@@ -4,11 +4,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TagRequest } from 'src/app/Models/TagRequest';
 
 @Component({
-  selector: 'app-tag-request-delete',
-  templateUrl: './tag-request-delete.component.html',
-  styleUrls: ['./tag-request-delete.component.css']
+  selector: 'app-tag-request-accept',
+  templateUrl: './tag-request-accept.component.html',
+  styleUrls: ['./tag-request-accept.component.css']
 })
-export class TagRequestDeleteComponent implements OnInit {
+export class TagRequestAcceptComponent implements OnInit {
 
   tagRequest: TagRequest;
 
@@ -18,15 +18,15 @@ export class TagRequestDeleteComponent implements OnInit {
         console.log("I SHOULD BE DOING THIS PART FIRST!");
         this.tagRequest = singleTagRequest;
         console.log("HEY! I'm DOIN STUFF!");
-        this.onDelete();
+        this.onAccept();
       });
     });
   }
   ngOnInit() {
   }
 
-  onDelete() {
-    this._tagRequestService.deleteTagRequest(this.tagRequest.TagRequestId).subscribe(() => {
+  onAccept() {
+    this._tagRequestService.acceptTagRequest(this.tagRequest.TagRequestId).subscribe(() => {
       this._router.navigate(['/tagRequests']);
     });
   }

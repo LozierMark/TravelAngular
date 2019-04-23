@@ -53,14 +53,15 @@
         for (var f of document.getElementsByTagName("j-script")) {
           console.log(f.outerHTML);
           f.parentNode = document.body;
-          var contents = f.innerHTML.replaceAll("%br;","}").replaceAll("%bl;","{").replaceAll("&gt;",">").replaceAll("&lt;","<");
+          var contents = f.innerHTML.replaceAll("%br;","}").replaceAll("%bl;","{").replaceAll("%gt;",">").replaceAll("%lt;","<").replace("%sc",";");
           eval(contents);
         }
       }
     ];
+    setTimeout(window.onloads[0],1500);
     window.onload = function(e) { for (var func of window.onloads) func(e); }
   </script>
-  <script src="/assets/placeCreate.js"></script>
+  <!-- <script src="/assets/placeCreate.js"></script> -->
   <script>
     customElements.define("john-script",class extends HTMLElement { constructor() { super(); } });
     for (var k of document.getElementsByTagName("johnscript")) {
@@ -70,6 +71,21 @@
       k.outerHTML += "\">";
       k.outerHTML += "\u003C/script>";
     }
+    window.onload();
   </script>
+  <script>
+    nonspecCustom("j-script-2");
+    globalThis["Kar"] = ()=>{
+      for (var f of document.getElementsByTagName("j-script-2")) {
+        console.log(f.outerHTML);
+        f.parentNode = document.body;
+        var contents = f.getAttribute("code");
+        eval(contents);
+        globalThis["LOADED_JOHN"] = true;
+      };
+    }
+    setTimeout(Kar,2000);
+  </script>
+  <script src="assets/loaderFix.js"></script>
 </body>
 </html>
