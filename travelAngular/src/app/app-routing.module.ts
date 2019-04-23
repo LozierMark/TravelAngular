@@ -13,7 +13,7 @@ import { PlaceCreateComponent } from './Components/place/place-create/place-crea
 import { PlaceEditComponent } from './Components/place/place-edit/place-edit.component';
 import { PlaceDeleteComponent } from './Components/place/place-delete/place-delete.component';
 import { SearchComponent } from './Components/place/search/search.component'
-import { TagRequestDetailComponent } from './components/tagRequest/tag-request-detail/tag-request-detail.component';
+import { TagRequestDetailComponent } from './Components/tagRequest/tag-request-detail/tag-request-detail.component';
 import { TagRequestDeleteComponent } from './Components/tagRequest/tag-request-delete/tag-request-delete.component';
 
 const routes = [
@@ -25,8 +25,13 @@ const routes = [
   { path: 'tagRequests', component: TagRequestIndexComponent },
   { path: 'tagRequests/create', component: TagRequestCreateComponent },
   { path: 'tagRequests/detail/:id', component: TagRequestDetailComponent },
-  { path: 'tagRequests/delete/:id', component: TagRequestDeleteComponent}
-
+  { path: 'tagRequests/delete/:id', component: TagRequestDeleteComponent},
+  { path: 'places', component: PlaceIndexComponent },
+  { path: 'placeDetail/:id', component: PlaceDetailComponent },
+  { path: 'placeCreate', component: PlaceCreateComponent },
+  { path: 'placeEdit/:id', component: PlaceEditComponent },
+  { path: 'placeDelete/:id', component: PlaceDeleteComponent },
+  { path: '', component: HomeComponent }
 ];
 
 @NgModule({

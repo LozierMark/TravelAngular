@@ -42,7 +42,39 @@
     <button class="button" mat-raised-button routerLink="/places">Back to All Places</button>
   </div>
   <div *ngIf="refreshTagsOutput">{{refreshTagsOutput()}}</div>
-  <john-script src="/assets/placeCreate.js"></john-script>
+  <!-- <john-script src="/assets/placeCreate.js"></john-script> -->
+  <j-script>
+    superJohnDebugMode = true;
+    allTags = [];
+    setInterval(()=>%bl;
+        // console.log(`PARSING "$%bl;document.getElementById("Z").innerText%br;"`);
+        allTags = JSON.parse(document.getElementById("Z").innerText);
+        // if (!debug) Z.style.display = "none";
+    %br;,1000);
+    function addTag() %bl;
+        console.log(allTags);
+        var tval = tagSelector.value;
+        console.log(tval);
+        var kxn = 0;
+        for (var tag of allTags) %bl;
+            console.log(`[$%bl;kxn++%br;] = $%bl;tag.TagId%br; ($%bl;typeof tag.TagId%br;)`);
+        %br;
+        var kxnr = allTags.filter(function(e) %bl; return e.TagId == tval %br;);
+        console.log(`KXNR: $%bl;JSON.stringify(kxnr)%br;`);
+        tagCont.innerHTML = `<h-tag id="$%bl;tval%br;">$%bl;kxnr[0].TagName%br;&nbsp;&nbsp;<a onclick="removeTag('$%bl;tval%br;');">X</a></h-tag>$%bl;tagCont.innerHTML%br;`;
+        document.getElementById(tagSelector.value).tagId = tagSelector.value;
+    %br;
+    function removeTag(id) %bl;
+        for (var k of tagCont.children) %bl;
+            if (k.tagId == id) %bl; k.outerHTML = ""; %br;
+        %br;
+    %br;
+    function getTagData() %bl;
+        var tgd = [];
+        for (var k of document.getElementById("tagSelector").children) tgd.push(k.tagId);
+        return tgd;
+    %br;
+  </j-script>
   <!-- <script>
     document.body.innerHTML += `<script src=""></script>`;
     eval(`function addTag() Xbr
