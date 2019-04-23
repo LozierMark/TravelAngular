@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class TagRequestCreateComponent implements OnInit {
 
   tagRequestForm: FormGroup;
+  PlaceId : string;
 
   constructor(private _tagRequestsService: TagRequestsService, private _form: FormBuilder, private _router: Router) {
     this.createForm();
@@ -29,7 +30,7 @@ export class TagRequestCreateComponent implements OnInit {
     });
   }
   onSubmit() {
-    this._tagRequestsService.createTagRequest(this.tagRequestForm.value).subscribe(data => {
+    this._tagRequestsService.createTagRequest(this.tagRequestForm.value, this.PlaceId).subscribe(data => {
       this._router.navigate(['/tagRequests']);
     });
   }
