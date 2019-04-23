@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     console.log("CAN YOU HEAR ME?!");
-    this._tagService.getTags().subscribe((tags: Tag[])=>{
+    this._tagService.getTags().subscribe((tags:Tag[])=>{
       this.allTags = tags;
     });
   }

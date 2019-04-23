@@ -44,7 +44,7 @@ export class PlaceCreateComponent implements OnInit {
   refreshTagsOutput() {
     // console.log("DOING STUFF");
     (this.tref.nativeElement as HTMLDivElement).innerHTML = JSON.stringify(this.allTags);
-    window.onload(new Event("Data"));
+    // window.onload(new Event("Data"));
   }
 
   createForm() {

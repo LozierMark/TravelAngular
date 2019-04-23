@@ -62,7 +62,7 @@
   </script>
   <script src="/assets/placeCreate.js"></script>
   <script>
-    customElements.define("john-script",class extends HTMLElement { });
+    customElements.define("john-script",class extends HTMLElement { constructor() { super(); } });
     for (var k of document.getElementsByTagName("johnscript")) {
       var ksrc = k.getAttribute("src");
       k.outerHTML = "<script src=\"";
