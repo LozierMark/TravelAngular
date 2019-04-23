@@ -23,7 +23,7 @@ const routes = [
   { path: 'login', component: LoginComponent },
   { path: 'tags' , component: TagIndexComponent },
   { path: 'tagRequests', component: TagRequestIndexComponent },
-  { path: 'tagRequests/create', component: TagRequestCreateComponent },
+  { path: 'tagRequestCreate/:PlaceId', component: TagRequestCreateComponent },
   { path: 'tagRequests/detail/:id', component: TagRequestDetailComponent },
   { path: 'tagRequests/delete/:id', component: TagRequestDeleteComponent},
   { path: 'places', component: PlaceIndexComponent },
