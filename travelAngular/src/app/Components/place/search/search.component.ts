@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { TagsService } from '../../../Services/tags.service'; // Bad Naming Convention
+import { Tag } from 'src/app/Models/Tag';
 // import { }
 
 @Component({
@@ -17,7 +18,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     console.log("CAN YOU HEAR ME?!");
-    this._tagService.getTags().subscribe((tags)=>{
+    this._tagService.getTags().subscribe((tags: Tag[])=>{
       this.allTags = tags;
     });
   }
