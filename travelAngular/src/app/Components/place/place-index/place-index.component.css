@@ -17,7 +17,7 @@ h1 {
     font-family: 'Merienda One', cursive;
     color: black; 
     padding-left: 10px;
-    background-color: rgb(243, 234, 234, .7);
+    background-color: rgba(243, 234, 234, .7);
     margin: 0px 10px 0px 10px;
 }
 

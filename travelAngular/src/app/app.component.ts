@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './Services/auth.service';
+import { ApiUrl } from '../environments/environment.prod';
 
 @Component({
   selector: 'app-root',
@@ -28,9 +29,12 @@ export class AppComponent {
     } else {
       this.welcomeText = "Not Logged In";
     }
-
-
+  }
+  logout() {
+    this._authService.logout();
+    setTimeout(()=>{window.location.href = "/"},1000);
+   };
   }
 
-}
+
 

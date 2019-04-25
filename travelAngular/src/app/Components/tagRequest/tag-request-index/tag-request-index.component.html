@@ -1,25 +1,22 @@
-<h1>All Tag Requests</h1>
-<hr>
+<body id="innerbody">
 
 <div>
-  <mat-table #table [dataSource]="dataSource">
+<h1>All Tag Requests</h1>
+</div>
+
+  <mat-table id="table" [dataSource]="dataSource">
     <mat-header-row *matHeaderRowDef="columnNames"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnNames;"></mat-row>
 
-    <ng-container matColumnDef="TagRequestId">
-      <mat-header-cell *matHeaderCellDef> Tag Request ID</mat-header-cell>
-      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestId}}</mat-cell>
-    </ng-container>
-
     <ng-container matColumnDef="TagRequestName">
       <mat-header-cell *matHeaderCellDef> Tag Request Name </mat-header-cell>
-      <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestName}}</mat-cell>
+      <mat-cell *matCellDef="let tagRequest">{{tagRequest.TagRequestName}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="TagRequestUserName">
+    <!-- <ng-container matColumnDef="TagRequestUserName">
       <mat-header-cell *matHeaderCellDef> Tag Request UserName </mat-header-cell>
       <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestUserName}}</mat-cell>
-    </ng-container>
+    </ng-container> -->
 
     <ng-container matColumnDef="TagRequestDate">
       <mat-header-cell *matHeaderCellDef> Tag Request Date </mat-header-cell>
@@ -31,7 +28,18 @@
       <mat-cell *matCellDef="let tagRequest"> {{tagRequest.TagRequestPlace}}</mat-cell>
     </ng-container>
 
-   
+    <ng-container matColumnDef="buttons">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let tagRequest">
+        <!-- <i mat-icon class="material-icons" routerLink="/tagRequest/delete/{{tagRequest.TagRequestId}}">delete</i> -->
+        <!-- <i class="material-icons">library_books</i> -->
+        <button routerLink="/tagRequestDelete/{{tagRequest.TagRequestId}}">Deny</button>
+        <button routerLink="/tagRequestAccept/{{tagRequest.TagRequestId}}">Accept</button>
+      </mat-cell>
+    </ng-container>
+
+
   </mat-table>
-</div>
+
+</body>
 
