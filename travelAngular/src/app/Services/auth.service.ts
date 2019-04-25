@@ -10,7 +10,8 @@ import { UserInfo } from '../Models/UserInfo';
 
 
 // const ApiUrl = "http://localhost:52366";
-export const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net"
+// export const ApiUrl = "https://hashtagtravelbackend.azurewebsites.net"
+import { ApiUrl } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -25,17 +26,17 @@ export class AuthService {
   constructor(private _http: HttpClient, private _router: Router) { }
 
   register(regUserData: RegisterUser) {
-    return this._http.post(`${ApiUrl}/api/Account/Register`, regUserData);
+    return this._http.post(`${ApiUrl}/Account/Register`, regUserData);
   }
 
   login(loginInfo) {
     const str = `grant_type=password&username=${encodeURI(loginInfo.email)}&password=${encodeURI(loginInfo.password)}`;
       
-    return this._http.post(`${ApiUrl}/token`, str).subscribe( (token: Token) => {
+    return this._http.post(`${ApiUrl.substr(0,ApiUrl.lastIndexOf("/"))}/token`, str).subscribe( (token: Token) => {
       this.isLoggedIn.next(true);
       localStorage.setItem('id_token', token.access_token);
       localStorage.setItem('userName',token.userName);
-      this._http.get(`${ApiUrl}/api/Account/UserInfo`, {headers:new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem("id_token")}`)}).subscribe((userInfo:UserInfo)=>{
+      this._http.get(`${ApiUrl}/Account/UserInfo`, {headers:new HttpHeaders().set('Authorization',`Bearer ${localStorage.getItem("id_token")}`)}).subscribe((userInfo:UserInfo)=>{
         localStorage.setItem('userRole',(userInfo.IsAdmin ? "Admin" : "User"));
         // TODO: Possibly add this later if needed.
         // localStorage.setItem('userId',userInfo.UserId);
@@ -51,7 +52,7 @@ export class AuthService {
 
     const authHeader = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
 
-    this._http.post(`${ApiUrl}/api/Account/Logout`, {headers: authHeader } ) ;
+    this._http.post(`${ApiUrl}/Account/Logout`, {headers: authHeader } ) ;
     this._router.navigate(['/']);
   }
 
@@ -60,6 +61,6 @@ export class AuthService {
 
     const authHeader = new HttpHeaders().set('Authorization', `Bearer ${localStorage.getItem('id_token')}`);
 
-    return this._http.get(`${ApiUrl}/api/Account/UserInfo`, { headers: authHeader });
+    return this._http.get(`${ApiUrl}/Account/UserInfo`, { headers: authHeader });
   }
 }

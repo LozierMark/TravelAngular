@@ -1,0 +1,82 @@
+<div style="display:none;" #jsonOutput id="Z">{{JSON.stringify(allTags)}}</div>
+<div id="filters"></div>
+<div>
+  <select id="filterSelector">
+    <option *ngFor="let tag of allTags" value="{{tag.TagId}}">{{tag.TagName}}</option>
+  </select>
+  <button onclick="addFilter();">+Filter</button>
+  <div>
+    <j-script>
+      globalThis["ACTIVE_FILTERS"] = [];
+      allTags = [];
+      timer = setInterval(()=>%bl;
+        b = true;
+        try %bl;
+          console.log("PARSING JSON");
+          allTags = JSON.parse(document.getElementById("Z").innerHTML);
+        %br; catch(e) %bl;
+          b = false;
+        %br;
+        if (b) clearInterval(timer);
+      %br;,1000);
+      function d() %bl; %br;;
+      globalThis["loadFilters"] = function(a) %bl;
+        for (var f in a) %bl;
+          var tag = getK(f);
+        %br;
+      %br;;
+      globalThis["updateView"] = function() %bl;
+        if (window.location.searchData.filters) %bl;
+          loadFilters(JSON.parse(decodeURIComponent(window.location.searchData.filters)));
+        %br;
+        window.location.reload();
+      %br;;
+      globalThis["addFilter"] = function() %bl;
+        var tag = getK();
+        if (ACTIVE_FILTERS.includes(tag.TagId)) return;
+        console.log(tag);
+        filters.innerHTML += `<h-tag id="$%bl;tag.TagId%br;">$%bl;tag.TagName%br;&nbsp;&nbsp;<a onclick="removeFilter('$%bl;tag.TagId%br;');">X</a></h-tag>`;
+        document.getElementById(tag.TagId).tagId = tag.TagId;
+        globalThis["ACTIVE_FILTERS"].push(tag.TagId);
+        updateView();
+      %br;;
+
+      globalThis["getK"] = function(kr) %bl;
+        var scope_ = kr || allTags;
+        console.log(`FILTERSELECTOR: $%bl;filterSelector.value%br;`);
+        for (var k of scope_) %bl;
+          if (kr == k.TagId || k.TagId == filterSelector.value) return k;
+        %br;
+        return null;
+      %br;;
+
+      globalThis["removeFilter"] = function(id) %bl;
+        if (!ACTIVE_FILTERS.includes(id)) return;
+        for (var k of filters.children) %bl;
+          if (k.tagId == id) k.outerHTML = "";
+        %br;
+        globalThis["ACTIVE_FILTERS"] = globalThis["ACTIVE_FILTERS"].filter(e=>e!=id);
+        window.location.searchData = ACTIVE_FILTERS;
+      %br;;
+    </j-script>
+  </div>
+  <script>
+    allTags = {};
+    timer = setInterval(()=>{
+      b = true;
+      try {
+        allTags = JSON.parse(document.getElementById("Z").innerHTML);
+      } catch(e) {
+        b = false;
+      }
+      if (b) clearInterval(timer);
+    },1000);
+    allTags = {};
+    function addFilter() {
+      var tag = allTags.filter(e=>e.id==filterSelector.value)[0];
+      filters.innerHTML += `<h-tag id="{{tag.TagId}}">${tag.TagName}&nbsp;&nbsp;<a onclick="removeTag({{tag.TagId}});">X</a></h-tag>`;
+      document.getElementById(tag.TagId).tagId = tag.TagId;
+    }
+  </script>
+</div>
+<div>

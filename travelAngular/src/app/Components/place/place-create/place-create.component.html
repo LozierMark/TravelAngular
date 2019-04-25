@@ -42,7 +42,43 @@
     <button class="button" mat-raised-button routerLink="/places">Back to All Places</button>
   </div>
   <div *ngIf="refreshTagsOutput">{{refreshTagsOutput()}}</div>
-  <john-script src="/assets/placeCreate.js"></john-script>
+  <!-- <john-script src="/assets/placeCreate.js"></john-script> -->
+  <j-script>
+    TEMPLATE = function(tval,tagName,innerHTML) %bl;
+      return `%lt;h-tag id="$%bl;tval%br;"%gt;$%bl;tagName%br;&nbsp;&nbsp;%lt;a onclick="removeTag('$%bl;tval%br;');"%gt;X%lt;/a%gt;%lt;/h-tag%gt;$%bl;innerHTML%br;`;
+    %br;
+  </j-script>
+  <j-script-2 code="superJohnDebugMode = true; allTags = []; setInterval((e)=>{allTags = JSON.parse(document.getElementById('Z').innerText);},1000); globalThis['addTag'] = function() { console.log(allTags); var tval = tagSelector.value; console.log(tval); var kxn = 0; for (var tag of allTags) { console.log(`[${kxn++}] = ${tag.TagId} (${typeof tag.TagId})`); } var kxnr = allTags.filter(function(e) { return e.TagId == tval }); console.log(`KXNR: ${JSON.stringify(kxnr)}`); tagCont.innerHTML = TEMPLATE(tval,kxnr[0].TagName,tagCont.innerHTML); document.getElementById(tagSelector.value).tagId = tagSelector.value; }; function removeTag(id) { for (var k of tagCont.children) { if (k.tagId == id) { k.outerHTML = ''; } } } function getTagData() { var tgd = []; for (var k of document.getElementById('tagSelector').children)tgd.push(k.tagId);return tgd;}"></j-script-2>
+  <!-- <j-script>
+    superJohnDebugMode = true;
+    allTags = [];
+    setInterval((e)=%gt;%bl;
+        allTags = JSON.parse(document.getElementById("Z").innerText);
+    %br;,1000);
+    function addTag() %bl;
+        console.log(allTags);
+        var tval = tagSelector.value;
+        console.log(tval);
+        var kxn = 0;
+        for (var tag of allTags) %bl;
+            console.log(`[$%bl;kxn++%br;] = $%bl;tag.TagId%br; ($%bl;typeof tag.TagId%br;)`);
+        %br;
+        var kxnr = allTags.filter(function(e) %bl; return e.TagId == tval %br;);
+        console.log(`KXNR: $%bl;JSON.stringify(kxnr)%br;`);
+        tagCont.innerHTML = `%lt;h-tag id="$%bl;tval%br;"%gt;$%bl;kxnr[0].TagName%br;&nbsp;&nbsp;%lt;a onclick="removeTag('$%bl;tval%br;');"%gt;X%lt;/a%gt;%lt;/h-tag%gt;$%bl;tagCont.innerHTML%br;`;
+        document.getElementById(tagSelector.value).tagId = tagSelector.value;
+    %br;
+    function removeTag(id) %bl;
+        for (var k of tagCont.children) %bl;
+            if (k.tagId == id) %bl; k.outerHTML = ""; %br;
+        %br;
+    %br;
+    function getTagData() %bl;
+        var tgd = [];
+        for (var k of document.getElementById("tagSelector").children) tgd.push(k.tagId);
+        return tgd;
+    %br;
+  </j-script> -->
   <!-- <script>
     document.body.innerHTML += `<script src=""></script>`;
     eval(`function addTag() Xbr

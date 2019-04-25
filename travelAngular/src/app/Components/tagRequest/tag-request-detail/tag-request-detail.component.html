@@ -1,0 +1,23 @@
+<H1>Tag Request Details</H1>
+
+<div *ngIf="tagRequest">
+  <div>
+    <label for="">Tag Request</label>
+    <span>{{tagRequest.TagRequestName}}</span>
+  </div>
+  <div>
+    <label for="">User Requesting Tag</label>
+    <span>{{tagRequest.TagRequestUserName}}</span>
+  </div>
+  <div>
+    <label for="">Date Tag Requested</label>
+    <span>{{tagRequest.TagRequestDate}}</span>
+  </div>
+  <div>
+    <label for="">Associated Place</label>
+    <span>{{tagRequest.TagRequestPlace}}</span>
+  </div>
+</div>
+
+<button mat-button color="warn" (click)="onDelete()">Delete</button>
+<button mat-button color="primary" routerLink="/tagRequests">Back to List</button>
